@@ -71,8 +71,8 @@ export default function Gifts() {
 
               {/* Main Message */}
               <p className="text-gray-600 leading-relaxed">
-                Insya Allah, Hadiah yang diberikan akan diberikan kepada kami
-                untuk membantu kami mempersiapkan pernikahan kami.
+                Insya Allah, Hadiah yang diberikan kepada kami untuk membantu
+                kami mempersiapkan pernikahan kami.
               </p>
 
               {/* Arabic Dua */}
