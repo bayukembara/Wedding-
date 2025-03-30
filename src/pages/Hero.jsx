@@ -110,7 +110,7 @@ export default function Hero() {
   return (
     <>
       <section
-        id="home"
+        id="schedule"
         className="min-h-screen flex flex-col items-center justify-center px-4 py-16 sm:py-20 text-center relative overflow-hidden"
       >
         <motion.div

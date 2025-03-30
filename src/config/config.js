@@ -1,10 +1,12 @@
 const config = {
   data: {
-    title: "Pernikahan Bayu & Hanisah",
+    title: "Bayu & Hanisah’s Wedding",
     description:
       "Kami akan menikah dan mengundang Anda untuk turut merayakan momen istimewa ini.",
     groomName: "Bayu",
+    groomFullName: "Bayu Kembara",
     brideName: "Hanisah",
+    brideFullName: "Hanisah Damayanti",
     parentGroom: "Bapak Sigid Moeliawan & Ibu Eristya Widyawati",
     parentBride: "Bapak Mudjiharto Mulyo Widodo & Ibu Yuni Setyo Rahayu",
     date: "2025-12-27",
@@ -52,6 +54,15 @@ const config = {
         accountName: "FULANA",
       },
     ],
+    background: {
+      type: "video",
+      src: "/video/base_bg.mp4",
+      autoplay: true,
+      muted: true,
+      loop: true,
+      playsinline: true,
+    },
+    background_img: "/images/base_bg.png",
   },
 };
 

@@ -1,21 +1,23 @@
 // src/components/bottom-bar/BottomBar.jsx
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import {
   Home,
+  BellRing,
   CalendarHeart,
   MapPin,
   Gift,
-  MessageCircleHeart
-} from 'lucide-react';
+  MessageCircleHeart,
+} from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const menuItems = [
-  { icon: Home, label: 'Beranda', href: '#home' },
-  { icon: CalendarHeart, label: 'Event', href: '#event' },
-  { icon: MapPin, label: 'Lokasi', href: '#location' },
-  { icon: Gift, label: 'Hadiah', href: '#gifts' },
-  { icon: MessageCircleHeart, label: 'Harapan', href: '#wishes' },
+  { icon: Home, label: "Beranda", href: "#home" },
+  { icon: BellRing, label: "Jadwal", href: "#schedule" },
+  { icon: CalendarHeart, label: "Event", href: "#event" },
+  { icon: MapPin, label: "Lokasi", href: "#location" },
+  { icon: Gift, label: "Hadiah", href: "#gifts" },
+  { icon: MessageCircleHeart, label: "Harapan", href: "#wishes" },
 ];
 
 /**
@@ -35,7 +37,7 @@ const menuItems = [
  * @returns {JSX.Element} A JSX element containing the animated bottom navigation bar.
  */
 const BottomBar = () => {
-  const [active, setActive] = React.useState('home');
+  const [active, setActive] = React.useState("home");
 
   return (
     <motion.div
@@ -69,12 +71,14 @@ const BottomBar = () => {
                     : "stroke-gray-600"
                 )}
               />
-              <span className={cn(
-                "text-[10px] sm:text-xs font-medium transition-all duration-200 line-clamp-1",
-                active === item.label.toLowerCase()
-                  ? "scale-105 text-rose-500"
-                  : "scale-100"
-              )}>
+              <span
+                className={cn(
+                  "text-[10px] sm:text-xs font-medium transition-all duration-200 line-clamp-1",
+                  active === item.label.toLowerCase()
+                    ? "scale-105 text-rose-500"
+                    : "scale-100"
+                )}
+              >
                 {item.label}
               </span>
             </motion.a>
