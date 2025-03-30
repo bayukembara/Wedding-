@@ -1,25 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
+import config from "@/config/config";
 
 function TimeLine() {
-  const timelineData = [
-    {
-      tahun: "2020",
-      judul: "Pencapaian 1",
-      deskripsi: "Deskripsi pencapaian pertama Anda di sini",
-    },
-    {
-      tahun: "2021",
-      judul: "Pencapaian 2",
-      deskripsi: "Deskripsi pencapaian kedua Anda di sini",
-    },
-    {
-      tahun: "2022",
-      judul: "Pencapaian 3",
-      deskripsi: "Deskripsi pencapaian ketiga Anda di sini",
-    },
-  ];
-
   return (
     <section
       id="timeline"
@@ -33,7 +16,7 @@ function TimeLine() {
       >
         <h2 className="text-3xl font-bold mb-8">Timeline Perjalanan</h2>
 
-        {timelineData.map((item, index) => (
+        {config.data.timelineData.map((item, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
