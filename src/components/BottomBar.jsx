@@ -43,48 +43,50 @@ const BottomBar = () => {
 
   return (
     <motion.div
-      className="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50 w-full px-4 max-w-[510px]"
+      className="fixed bottom-4 max-sm:left-[2%] max-sm:right-[2%] max-sm:w-[100%] transform -translate-x-1/2 z-50 w-[95%] max-w-[430px]"
       initial={{ y: 100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, type: "spring", stiffness: 100 }}
     >
-      <div className="backdrop-blur-md bg-white/90 border border-gray-200/80 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.07)] px-4 py-2">
-        <nav className="flex justify-between items-center">
-          {menuItems.map((item) => (
-            <motion.a
-              key={item.label}
-              href={item.href}
-              className={cn(
-                "flex flex-col items-center justify-center py-2 px-3 rounded-xl transition-all duration-200",
-                "hover:bg-gray-50/80",
-                active === item.label.toLowerCase()
-                  ? "text-primary bg-primary/5"
-                  : "text-gray-600"
-              )}
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => setActive(item.label.toLowerCase())}
-            >
-              <item.icon
+      <div className="backdrop-blur-md bg-white/90 border border-gray-200/80 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.07)] overflow-x-visible w-[96%]">
+        <nav className="flex items-center overflow-x-auto scrollbar-thin scrollbar-thumb-gray-200 scrollbar-track-transparent px-4 py-2">
+          <div className="flex justify-between items-center w-full gap-2">
+            {menuItems.map((item) => (
+              <motion.a
+                key={item.label}
+                href={item.href}
                 className={cn(
-                  "h-[18px] w-[18px] sm:h-5 sm:w-5 mb-0.5 sm:mb-1 transition-colors duration-200",
+                  "flex flex-col items-center justify-center py-1.5 px-2 rounded-xl transition-all duration-200 min-w-[60px]",
+                  "hover:bg-gray-50/80",
                   active === item.label.toLowerCase()
-                    ? "stroke-rose-500"
-                    : "stroke-gray-600"
+                    ? "text-primary bg-primary/5"
+                    : "text-gray-600"
                 )}
-              />
-              <span
-                className={cn(
-                  "text-[10px] sm:text-xs font-medium transition-all duration-200 line-clamp-1",
-                  active === item.label.toLowerCase()
-                    ? "scale-105 text-rose-500"
-                    : "scale-100"
-                )}
+                whileHover={{ y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => setActive(item.label.toLowerCase())}
               >
-                {item.label}
-              </span>
-            </motion.a>
-          ))}
+                <item.icon
+                  className={cn(
+                    "h-[16px] w-[16px] sm:h-[18px] sm:w-[18px] mb-0.5 transition-colors duration-200",
+                    active === item.label.toLowerCase()
+                      ? "stroke-rose-500"
+                      : "stroke-gray-600"
+                  )}
+                />
+                <span
+                  className={cn(
+                    "text-[9px] sm:text-[10px] font-medium transition-all duration-200 line-clamp-1",
+                    active === item.label.toLowerCase()
+                      ? "scale-105 text-rose-500"
+                      : "scale-100"
+                  )}
+                >
+                  {item.label}
+                </span>
+              </motion.a>
+            ))}
+          </div>
         </nav>
       </div>
     </motion.div>
