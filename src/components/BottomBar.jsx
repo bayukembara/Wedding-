@@ -6,6 +6,7 @@ import {
   BellRing,
   CalendarHeart,
   MapPin,
+  Loader2,
   Gift,
   MessageCircleHeart,
 } from "lucide-react";
@@ -16,6 +17,7 @@ const menuItems = [
   { icon: BellRing, label: "Jadwal", href: "#schedule" },
   { icon: CalendarHeart, label: "Event", href: "#event" },
   { icon: MapPin, label: "Lokasi", href: "#location" },
+  { icon: Loader2, label: "Timeline", href: "#timeline" },
   { icon: Gift, label: "Hadiah", href: "#gifts" },
   { icon: MessageCircleHeart, label: "Harapan", href: "#wishes" },
 ];
@@ -41,7 +43,7 @@ const BottomBar = () => {
 
   return (
     <motion.div
-      className="fixed bottom-4 transform -translate-x-1/2 z-50 w-full px-4 max-w-[430px]"
+      className="fixed bottom-4 right-[37%] transform -translate-x-1/2 z-50 w-full px-4 max-w-[510px]"
       initial={{ y: 100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, type: "spring", stiffness: 100 }}
