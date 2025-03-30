@@ -10,10 +10,10 @@ export default function MainContent() {
   return (
     <>
       <Home />
+      <TimeLine />
       <Hero />
       <Events />
       <Location />
-      <TimeLine />
       <Gifts />
       <Wishes />
     </>
