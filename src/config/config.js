@@ -10,29 +10,30 @@ const config = {
     parentGroom: "Bapak Sigid Moeliawan & Ibu Eristya Widyawati",
     parentBride: "Bapak Mudjiharto Mulyo Widodo & Ibu Yuni Setyo Rahayu",
     date: "2025-12-27",
-    maps_url: "https://goo.gl/maps/abcdef",
+    maps_url: "https://maps.app.goo.gl/W7oXbPaMFDxDz44g6",
     maps_embed:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.0000000000005!2d106.8270733147699!3d-6.175392995514422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f4f1b6d7b1e7%3A0x2e69f4f1b6d7b1e7!2sMonumen%20Nasional!5e0!3m2!1sid!2sid!4v1633666820004!5m2!1sid!2sid",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.4998573862817!2d112.22028117605215!3d-7.520327874209855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e783fbac250c09b%3A0xae755450f9a194d!2sToko%20bu%20yuni!5e0!3m2!1sen!2sid!4v1743593870710!5m2!1sen!2sid",
+
     time: "10:00 - 13:00 WIB",
-    location: "Grand Ballroom, Hotel Majesty",
+    location: "Rumah Bapak Mudjiharto",
     address: "Jl. Jend. Sudirman No.1, Jakarta",
     ogImage: "/images/og-image.jpg",
     favicon: "/images/favicon.ico",
     agenda: [
       {
         title: "Akad Nikah",
-        date: "2024-12-24",
+        date: "2025-12-27",
         startTime: "10:00",
         endTime: "13:00",
-        location: "Grand Ballroom, Hotel Majesty",
+        location: "Rumah Bapak Mudjiharto",
         address: "Jl. Jend. Sudirman No.1, Jakarta",
       },
       {
         title: "Resepsi Nikah",
-        date: "2024-12-24",
+        date: "2025-12-27",
         startTime: "10:00",
         endTime: "13:00",
-        location: "Grand Ballroom, Hotel Majesty",
+        location: "Rumah Bapak Mudjiharto",
         address: "Jl. Jend. Sudirman No.1, Jakarta",
       },
     ],
@@ -44,14 +45,14 @@ const config = {
     },
     banks: [
       {
-        bank: "Bank Central Asia",
+        bank: "Blu Digital",
         accountNumber: "1234567890",
-        accountName: "FULAN",
+        accountName: "Bayu Kembara",
       },
       {
-        bank: "Bank Mandiri",
+        bank: "Bank Jago",
         accountNumber: "0987654321",
-        accountName: "FULANA",
+        accountName: "Hanisah Damayanti",
       },
     ],
     background: {
@@ -62,7 +63,7 @@ const config = {
       loop: true,
       playsinline: true,
     },
-    background_img: "/images/base_bg.png",
+    background_img: "/images/base_bg.jpg",
     timelineData: [
       {
         tahun: "2022",

@@ -143,9 +143,11 @@ export default function Hero() {
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.6 }}
-              className="text-3xl sm:text-5xl font-serif bg-clip-text text-transparent bg-gradient-to-r from-sky-600 to-pink-600"
+              className="text-xl sm:text-4xl font-serif bg-clip-text text-transparent bg-gradient-to-r from-sky-600 to-pink-600"
             >
-              {config.data.groomName} & {config.data.brideName}
+              <p>{config.data.groomFullName}</p>
+              <span>&</span>
+              <p>{config.data.brideFullName}</p>
             </motion.h2>
           </div>
 
@@ -188,29 +190,6 @@ export default function Hero() {
                     </span>
                   </motion.div>
                 </div>
-
-                <div className="flex items-center justify-center gap-3">
-                  <div className="h-px w-8 sm:w-12 bg-sky-200/50" />
-                  <div className="w-2 h-2 rounded-full bg-sky-200" />
-                  <div className="h-px w-8 sm:w-12 bg-sky-200/50" />
-                </div>
-
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 1.1 }}
-                  className="space-y-2"
-                >
-                  <p className="text-gray-500 font-serif italic text-sm">
-                    Kepada Yth.
-                  </p>
-                  <p className="text-gray-600 font-medium text-sm">
-                    Bapak/Ibu/Saudara/i
-                  </p>
-                  <p className="text-sky-500 font-semibold text-lg">
-                    {guestName ? guestName : "Tamu"}
-                  </p>
-                </motion.div>
               </div>
 
               <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-px">

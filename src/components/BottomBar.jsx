@@ -16,7 +16,7 @@ const menuItems = [
   { icon: Home, label: "Beranda", href: "#home" },
   { icon: Loader2, label: "Timeline", href: "#timeline" },
   { icon: BellRing, label: "Jadwal", href: "#schedule" },
-  { icon: CalendarHeart, label: "Event", href: "#event" },
+  { icon: CalendarHeart, label: "Acara", href: "#event" },
   { icon: MapPin, label: "Lokasi", href: "#location" },
   { icon: Gift, label: "Hadiah", href: "#gifts" },
   { icon: MessageCircleHeart, label: "Harapan", href: "#wishes" },
