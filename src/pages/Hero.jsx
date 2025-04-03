@@ -6,23 +6,6 @@ import { formatEventDate } from "@/lib/formatEventDate";
 import { safeBase64 } from "@/lib/base64";
 
 export default function Hero() {
-  const [guestName, setGuestName] = useState("");
-
-  useEffect(() => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const guestParam = urlParams.get("guest");
-
-    if (guestParam) {
-      try {
-        // const decodedName = safeBase64.decode(guestParam);
-        setGuestName(guestParam);
-      } catch (error) {
-        console.error("Error decoding guest name:", error);
-        setGuestName("");
-      }
-    }
-  }, []);
-
   const CountdownTimer = ({ targetDate }) => {
     const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
     function calculateTimeLeft() {
@@ -111,13 +94,20 @@ export default function Hero() {
     <>
       <section
         id="schedule"
-        className="min-h-screen flex flex-col items-center justify-center px-4 py-16 sm:py-20 text-center relative overflow-hidden"
+        className="min-h-screen flex flex-col items-center justify-center px-4 py-16 sm:py-10 text-center relative overflow-hidden"
       >
+        <motion.div className="absolute inset-0 w-full h-full">
+          <img
+            src={config.data.background_base}
+            alt="home"
+            className="w-screen h-screen object-cover flex items-center justify-center"
+          />
+        </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="space-y-6 relative z-10"
+          className="space-y-2 relative z-10"
         >
           <motion.div
             initial={{ scale: 0 }}

@@ -65,6 +65,7 @@ const config = {
     },
     background_img: "/images/base_bg.jpg",
     background_home: "/images/home.jpg",
+    background_base: "/images/base.jpg",
     timelineData: [
       {
         tahun: "2022",
