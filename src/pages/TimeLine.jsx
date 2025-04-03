@@ -12,7 +12,7 @@ function TimeLine() {
         <img
           src={config.data.background_base}
           alt="home"
-          className="w-screen h-screen object-cover flex items-center justify-center"
+          className="w-screen h-screen object-fit flex items-center justify-center"
         />
       </motion.div>
       <motion.div
