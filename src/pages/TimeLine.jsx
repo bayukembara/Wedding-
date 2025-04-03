@@ -6,13 +6,13 @@ function TimeLine() {
   return (
     <section
       id="timeline"
-      className="min-h-screen flex flex-col items-center justify-center px-4 py-10 sm:py-10 text-center relative overflow-hidden"
+      className="min-h-screen flex flex-col items-center justify-center px-1 py-2 sm:py-10 text-center relative overflow-hidden"
     >
-      <motion.div className="absolute inset-0 w-full h-full">
+      <motion.div className="absolute inset-0 w-full h-[100%]">
         <img
           src={config.data.background_base}
           alt="home"
-          className="w-screen h-screen object-fit flex items-center justify-center"
+          className="w-screen h-[100%] object-fill flex items-center justify-center"
         />
       </motion.div>
       <motion.div

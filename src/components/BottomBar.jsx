@@ -1,5 +1,5 @@
 // src/components/bottom-bar/BottomBar.jsx
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import {
   Home,
@@ -41,7 +41,43 @@ const menuItems = [
  * @returns {JSX.Element} A JSX element containing the animated bottom navigation bar.
  */
 const BottomBar = () => {
-  const [active, setActive] = React.useState("home");
+  const [active, setActive] = useState("home");
+
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const sectionId = entry.target.id;
+          setActive(sectionId);
+        }
+      });
+    }, observerOptions);
+
+    // Observe semua section
+    menuItems.forEach((item) => {
+      const sectionId = item.href.substring(1);
+      const element = document.getElementById(sectionId);
+      if (element) {
+        observer.observe(element);
+      }
+    });
+
+    return () => {
+      menuItems.forEach((item) => {
+        const sectionId = item.href.substring(1);
+        const element = document.getElementById(sectionId);
+        if (element) {
+          observer.unobserve(element);
+        }
+      });
+    };
+  }, []);
 
   return (
     <motion.div
@@ -60,18 +96,18 @@ const BottomBar = () => {
                 className={cn(
                   "flex flex-col items-center justify-center py-1.5 px-2 rounded-xl transition-all duration-200 min-w-[60px]",
                   "hover:bg-gray-50/80",
-                  active === item.label.toLowerCase()
+                  active === item.href.substring(1)
                     ? "text-primary bg-primary/5"
                     : "text-gray-600"
                 )}
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={() => setActive(item.label.toLowerCase())}
+                onClick={() => setActive(item.href.substring(1))}
               >
                 <item.icon
                   className={cn(
                     "h-[16px] w-[16px] sm:h-[18px] sm:w-[18px] mb-0.5 transition-colors duration-200",
-                    active === item.label.toLowerCase()
+                    active === item.href.substring(1)
                       ? "stroke-rose-500"
                       : "stroke-gray-600"
                   )}
@@ -79,7 +115,7 @@ const BottomBar = () => {
                 <span
                   className={cn(
                     "text-[9px] sm:text-[10px] font-medium transition-all duration-200 line-clamp-1",
-                    active === item.label.toLowerCase()
+                    active === item.href.substring(1)
                       ? "scale-105 text-rose-500"
                       : "scale-100"
                   )}

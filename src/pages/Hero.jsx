@@ -38,7 +38,7 @@ export default function Hero() {
             animate={{ scale: 1, opacity: 1 }}
             className="flex flex-col items-center p-3 bg-white/80 backdrop-blur-sm rounded-xl border border-sky-100"
           >
-            <span className="text-xl sm:text-2xl font-bold text-sky-600">
+            <span className="text-xl sm:text-2xl font-bold text-orange-600">
               {timeLeft[interval]}
             </span>
             <span className="text-xs text-gray-500 capitalize">{interval}</span>
@@ -115,7 +115,7 @@ export default function Hero() {
             transition={{ delay: 0.2 }}
             className="inline-block mx-auto"
           >
-            <span className="px-4 py-1 text-sm bg-sky-50 text-sky-600 rounded-full border border-sky-200">
+            <span className="px-4 py-1 text-sm bg-[#804100]/30 text-[#fcfcfc] rounded-full border border-[#492807]">
               Catat Tanggal Penting Ini
             </span>
           </motion.div>
@@ -125,7 +125,7 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
-              className="text-gray-500 font-light italic text-base sm:text-lg"
+              className="text-white font-light italic text-base sm:text-lg"
             >
               InsyaAllah Kami Akan Menikah
             </motion.p>
@@ -133,7 +133,7 @@ export default function Hero() {
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.6 }}
-              className="text-xl sm:text-4xl font-serif bg-clip-text text-transparent bg-gradient-to-r from-sky-600 to-pink-600"
+              className="text-3xl sm:text-4xl font-serif bg-clip-text text-transparent text-white drop-shadow-[2px_2px_0_black]"
             >
               <p>{config.data.groomFullName}</p>
               <span>&</span>
@@ -147,11 +147,11 @@ export default function Hero() {
             transition={{ delay: 0.8 }}
             className="relative max-w-md mx-auto"
           >
-            <div className="absolute inset-0 bg-gradient-to-b from-sky-50/50 to-white/50 backdrop-blur-md rounded-2xl" />
+            <div className="absolute inset-0 bg-white/30 backdrop-blur-sm rounded-2xl" />
 
-            <div className="relative px-4 sm:px-8 py-8 sm:py-10 rounded-2xl border border-sky-100/50">
+            <div className="relative px-4 sm:px-8 py-8 sm:py-10 rounded-2xl border border-orange-300/50">
               <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-px">
-                <div className="w-20 sm:w-32 h-[2px] bg-gradient-to-r from-transparent via-sky-200 to-transparent" />
+                <div className="w-20 sm:w-32 h-[2px] bg-gradient-to-r from-transparent via-orange-300 to-transparent" />
               </div>
 
               <div className="space-y-6 text-center">
@@ -162,8 +162,8 @@ export default function Hero() {
                     transition={{ delay: 0.9 }}
                     className="flex items-center justify-center space-x-2"
                   >
-                    <Calendar className="w-4 h-4 text-sky-400" />
-                    <span className="text-gray-700 font-medium text-sm sm:text-base">
+                    <Calendar className="w-4 h-4 text-white drop-shadow-[2px_2px_0_black]" />
+                    <span className="text-white drop-shadow-[2px_2px_0_black] font-medium text-sm sm:text-base">
                       {formatEventDate(config.data.date, "full")}
                     </span>
                   </motion.div>
@@ -174,8 +174,8 @@ export default function Hero() {
                     transition={{ delay: 1 }}
                     className="flex items-center justify-center space-x-2"
                   >
-                    <Clock className="w-4 h-4 text-sky-400" />
-                    <span className="text-gray-700 font-medium text-sm sm:text-base">
+                    <Clock className="w-4 h-4 text-white drop-shadow-[2px_2px_0_black]" />
+                    <span className="text-white drop-shadow-[2px_2px_0_black]  font-medium text-sm sm:text-base">
                       {config.data.time}
                     </span>
                   </motion.div>
