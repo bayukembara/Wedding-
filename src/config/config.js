@@ -64,6 +64,7 @@ const config = {
       playsinline: true,
     },
     background_img: "/images/base_bg.jpg",
+    background_home: "/images/home.jpg",
     timelineData: [
       {
         tahun: "2022",

@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import {
   Home,
+  Quote,
   BellRing,
   CalendarHeart,
   MapPin,
@@ -14,6 +15,7 @@ import { cn } from "@/lib/utils";
 
 const menuItems = [
   { icon: Home, label: "Beranda", href: "#home" },
+  { icon: Quote, label: "Quote", href: "#quote" },
   { icon: Loader2, label: "Timeline", href: "#timeline" },
   { icon: BellRing, label: "Jadwal", href: "#schedule" },
   { icon: CalendarHeart, label: "Acara", href: "#event" },
