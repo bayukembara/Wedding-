@@ -14,7 +14,7 @@ function TimeLine() {
         <img
           src={config.data.background_base}
           alt="home"
-          className="w-screen h-[100%] object-fill flex items-center justify-center"
+          className="w-screen h-screen object-fill flex items-center justify-center"
         />
       </motion.div>
       <motion.div
@@ -28,7 +28,7 @@ function TimeLine() {
             Perjalanan Cinta Kami
           </h2>
           {/* Garis tengah utama */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 h-[95%] w-0.5 bg-[#e66814]"></div>
+          <div className="absolute left-1/2 transform -translate-x-1/2 h-[90%] w-0.5 bg-[#e66814]"></div>
 
           {config.data.timelineData.map((item, index) => (
             <motion.div
@@ -49,10 +49,10 @@ function TimeLine() {
                   className="bg-white/40 backdrop-blur-sm p-2 rounded-md shadow-sm border border-gray-100 inline-block"
                 >
                   <div className="flex flex-col">
-                    <span className="text-sm text-justify text-balance font-bold text-[#884e0c]">
+                    <span className="text-xs text-justify text-balance font-bold text-[#884e0c]">
                       {item.tahun}
                     </span>
-                    <h4 className="text-sm text-justify text-balance  font-semibold text-[#884e0c]">
+                    <h4 className="text-xs text-justify text-balance  font-semibold text-[#884e0c]">
                       {item.judul}
                     </h4>
                     <p className="text-xs text-justify text-balance text-[#050505]">
