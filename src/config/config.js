@@ -15,8 +15,9 @@ const config = {
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.4998573862817!2d112.22028117605215!3d-7.520327874209855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e783fbac250c09b%3A0xae755450f9a194d!2sToko%20bu%20yuni!5e0!3m2!1sen!2sid!4v1743593870710!5m2!1sen!2sid",
 
     time: "10:00 - 13:00 WIB",
-    location: "Rumah Bapak Mudjiharto",
-    address: "Jl. Jend. Sudirman No.1, Jakarta",
+    location: "Rumah Mempelai Wanita",
+    address:
+      "Ds/Dsn. Plosogeneng RT03 RW02 Kecamatan Jombang Kabupaten Jombang ",
     ogImage: "/images/og-image.jpg",
     favicon: "/images/favicon.ico",
     agenda: [
@@ -25,16 +26,18 @@ const config = {
         date: "2025-12-27",
         startTime: "10:00",
         endTime: "13:00",
-        location: "Rumah Bapak Mudjiharto",
-        address: "Jl. Jend. Sudirman No.1, Jakarta",
+        location: "Rumah Mempelai Wanita",
+        address:
+          "Ds/Dsn. Plosogeneng RT03 RW02 Kecamatan Jombang Kabupaten Jombang ",
       },
       {
         title: "Resepsi Nikah",
         date: "2025-12-27",
         startTime: "10:00",
         endTime: "13:00",
-        location: "Rumah Bapak Mudjiharto",
-        address: "Jl. Jend. Sudirman No.1, Jakarta",
+        location: "Rumah Mempelai Wanita",
+        address:
+          "Ds/Dsn. Plosogeneng RT03 RW02 Kecamatan Jombang Kabupaten Jombang ",
       },
     ],
     audio: {
