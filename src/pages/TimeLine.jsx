@@ -21,7 +21,7 @@ function TimeLine() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="space-y-5 relative z-10 w-full max-w-6xl mx-auto"
+        className="space-y-4 relative z-10 w-full max-w-6xl mx-auto"
       >
         <div className="relative">
           <motion.h2
@@ -32,7 +32,7 @@ function TimeLine() {
               type: "spring",
               stiffness: 100,
             }}
-            className="text-2xl font-bold mb-5 z-10 text-[#a84e1d]"
+            className="text-xl font-bold mb-4 z-10 text-[#a84e1d]"
           >
             Perjalanan Cinta Kami
           </motion.h2>
@@ -45,7 +45,7 @@ function TimeLine() {
               initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`flex items-center justify-center mb-3 ${
+              className={`flex items-center justify-center mb-2 ${
                 index % 2 === 0 ? "flex-row" : "flex-row-reverse"
               }`}
             >
@@ -55,16 +55,16 @@ function TimeLine() {
               >
                 <motion.div
                   whileHover={{ scale: 1.02 }}
-                  className="bg-white/40 backdrop-blur-sm p-2 rounded-md shadow-sm border border-gray-100 inline-block"
+                  className="bg-white/40 backdrop-blur-sm p-1.5 rounded-md shadow-sm border border-gray-100 inline-block"
                 >
                   <div className="flex flex-col">
-                    <span className="text-xs text-justify text-balance font-bold text-[#884e0c]">
+                    <span className="text-[10px] text-justify text-balance font-bold text-[#884e0c]">
                       {item.tahun}
                     </span>
-                    <h4 className="text-xs text-justify text-balance font-semibold text-[#884e0c]">
+                    <h4 className="text-[10px] text-justify text-balance font-semibold text-[#884e0c]">
                       {item.judul}
                     </h4>
-                    <p className="text-xs text-justify text-balance text-[#050505]">
+                    <p className="text-[10px] text-justify text-balance text-[#050505]">
                       {item.deskripsi}
                     </p>
                   </div>
@@ -72,10 +72,10 @@ function TimeLine() {
               </div>
 
               {/* Titik Timeline di Tengah */}
-              <div className="relative w-11 flex items-center justify-center">
+              <div className="relative w-10 flex items-center justify-center">
                 <motion.div
                   whileHover={{ scale: 1.2 }}
-                  className="w-2 h-2 bg-blue-500 rounded-full z-10 shadow-sm border border-white"
+                  className="w-1.5 h-1.5 bg-blue-500 rounded-full z-10 shadow-sm border border-white"
                 ></motion.div>
 
                 {/* Garis horizontal ke konten */}
