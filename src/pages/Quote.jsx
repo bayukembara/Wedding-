@@ -17,7 +17,7 @@ function Home() {
         />
       </motion.div>
       <div className="relative z-10 flex flex-col items-center justify-center">
-        <h1 className="text-[#cf642b] text-2xl font-bold drop-shadow-md">
+        <h1 className="text-[#a84e1d] text-2xl font-bold drop-shadow-md">
           Holy Qur'an
         </h1>
         <div className="relative flex items-center justify-center">
@@ -38,7 +38,7 @@ function Home() {
           Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda
           (kebesaran Allah) bagi kaum yang berpikir.
         </p>
-        <h2 className="text-xl text-[#cf642b] italic font-medium mt-4">
+        <h2 className="text-xl text-[#a84e1d] italic font-medium mt-4">
           ~ Q.S. Ar - Rum:21 ~
         </h2>
       </div>
