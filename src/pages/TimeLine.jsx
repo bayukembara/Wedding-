@@ -19,7 +19,7 @@ function TimeLine() {
         />
       </motion.div>
       <motion.div className="relative z-10 px-4 py-20 items-center justify-center">
-        <h2 className="text-3xl md:text-3xl font-serif font-bold text-[#a84e1d] drop-shadow-md mb-12">
+        <h2 className="text-3xl md:text-3xl font-bold text-[#a84e1d] drop-shadow-md mb-12">
           Perjalanan Cinta Kami
         </h2>
         <div className="max-w-4xl mx-auto">
@@ -33,7 +33,7 @@ function TimeLine() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.2 }}
                 >
-                  <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-lg w-[300px] h-[200px] flex flex-col justify-between">
+                  <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-lg w-[300px] min-h-[200px] flex flex-col justify-between">
                     <div>
                       <h3 className="text-2xl font-bold text-[#cf642b] mb-2">
                         {item.tahun}
@@ -42,9 +42,7 @@ function TimeLine() {
                         {item.judul}
                       </h4>
                     </div>
-                    <p className="text-[#4E2F1E] line-clamp-3">
-                      {item.deskripsi}
-                    </p>
+                    <p className="text-[#4E2F1E]">{item.deskripsi}</p>
                   </div>
                 </motion.div>
               ))}
