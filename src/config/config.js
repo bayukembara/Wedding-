@@ -68,30 +68,35 @@ const config = {
     background_base: "/images/base.jpg",
     timelineData: [
       {
+        id: 1,
         tahun: "2022",
         judul: "Perkenalan",
         deskripsi:
           "Perkenalan Bayu dan Hanisah pertama kali ketika teman membujuk kita berdua untuk berkenalan.",
       },
       {
+        id: 2,
         tahun: "2024",
         judul: "Mengenal Lebih Dekat",
         deskripsi:
           "Pada bulan Februari pertama kalinya Bayu dan Hanisah bertemu dengan semua drama yang ada ",
       },
       {
+        id: 3,
         tahun: "2024",
         judul: "Keseriusan dalam Hubungan",
         deskripsi:
           "2024 April setelah hari raya idul fitri, kedua kalinya insan ini bertemu sekaligus bersama orang tua",
       },
       {
+        id: 4,
         tahun: "2025",
         judul: "Keseriusan dalam Hubungan",
         deskripsi:
           "2025 April setelah hari raya idul fitri, ketiga kalinya insan ini bertemu sekaligus bayu bersama orang tuanya meminta hanisah untuk menjadi istrinya dengan lamaran yang khidmat dan penuh kebahagiaan",
       },
       {
+        id: 5,
         tahun: "2025",
         judul: "Keseriusan dalam Hubungan",
         deskripsi:

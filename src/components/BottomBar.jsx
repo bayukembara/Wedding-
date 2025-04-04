@@ -59,7 +59,6 @@ const BottomBar = () => {
       });
     }, observerOptions);
 
-    // Observe semua section
     menuItems.forEach((item) => {
       const sectionId = item.href.substring(1);
       const element = document.getElementById(sectionId);
@@ -108,7 +107,7 @@ const BottomBar = () => {
                   className={cn(
                     "h-[16px] w-[16px] sm:h-[18px] sm:w-[18px] mb-0.5 transition-colors duration-200",
                     active === item.href.substring(1)
-                      ? "stroke-rose-500"
+                      ? "stroke-[#884e0c]"
                       : "stroke-gray-600"
                   )}
                 />
@@ -116,7 +115,7 @@ const BottomBar = () => {
                   className={cn(
                     "text-[9px] sm:text-[10px] font-medium transition-all duration-200 line-clamp-1",
                     active === item.href.substring(1)
-                      ? "scale-105 text-rose-500"
+                      ? "scale-105 text-[#884e0c]"
                       : "scale-100"
                   )}
                 >
