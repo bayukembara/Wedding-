@@ -16,7 +16,7 @@ function Home() {
           className="w-screen h-screen object-cover flex items-center justify-center"
         />
       </motion.div>
-      <div className="relative z-10 flex flex-col items-center justify-center bg-white/20 rounded-xl">
+      <div className="relative z-10 flex flex-col items-center justify-center">
         <h1 className="text-[#cf642b] text-2xl font-bold drop-shadow-md">
           Holy Qur'an
         </h1>
