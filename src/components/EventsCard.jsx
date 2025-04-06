@@ -31,7 +31,7 @@ const Modal = ({ isOpen, onClose, children }) => {
             exit={{ opacity: 0, y: 20 }}
             className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[70] w-[90%] max-w-sm"
           >
-            <div className="bg-white transform -translate-x-1/2 -translate-y-1/2 rounded-2xl p-6 shadow-2xl border border-gray-100">
+            <div className="bg-orange-300 transform -translate-x-1/2 -translate-y-1/2 rounded-2xl p-6 shadow-2xl border border-gray-100">
               {children}
             </div>
           </motion.div>
@@ -134,19 +134,19 @@ END:VCALENDAR`;
   return (
     <div className="relative">
       <motion.div
-        className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 space-y-4"
+        className="bg-white/40 backdrop-blur-sm rounded-2xl p-6 shadow-sm bg-gradient-to-r from-transparent via-orange-300 to-transparent border border-orange-300/50 space-y-4"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
         <div className="flex justify-between items-center">
-          <h3 className="text-xl font-semibold text-gray-800">
+          <h3 className="text-xl font-semibold text-[#995028]">
             {eventData.title.split(" - ")[0]}
           </h3>
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="text-sky-500 hover:text-sky-600 transition-colors"
+            className="text-orange-600 hover:text-orange-800 transition-colors"
             onClick={() => setShowCalendarModal(true)}
           >
             <CalendarPlus className="w-5 h-5" />
@@ -154,18 +154,20 @@ END:VCALENDAR`;
         </div>
         <div className="space-y-3 text-gray-600">
           <div className="flex items-center space-x-3">
-            <Calendar className="w-5 h-5 text-sky-500" />
-            <span>{formatEventDate(eventData.date)}</span>
+            <Calendar className="w-5 h-5 text-orange-600" />
+            <span className="text-[#4e2915]">
+              {formatEventDate(eventData.date)}
+            </span>
           </div>
           <div className="flex items-center space-x-3">
-            <Clock className="w-5 h-5 text-sky-500" />
-            <span>
+            <Clock className="w-5 h-5 text-orange-600" />
+            <span className="text-[#4e2915]">
               {eventData.startTime} - {eventData.endTime} WIB
             </span>
           </div>
           <div className="flex items-center space-x-3">
-            <MapPin className="w-5 h-5 text-sky-500" />
-            <span>{eventData.location}</span>
+            <MapPin className="w-5 h-5 text-orange-600" />
+            <span className="text-[#4e2915]">{eventData.location}</span>
           </div>
         </div>
       </motion.div>
@@ -192,7 +194,7 @@ END:VCALENDAR`;
           <div className="space-y-3">
             <CalendarButton
               icon={(props) => (
-                <Chrome {...props} className="w-5 h-5 text-sky-500" />
+                <Chrome {...props} className="w-5 h-5 text-orange-600" />
               )}
               label="Google Calendar"
               onClick={() => window.open(googleCalendarLink(), "_blank")}

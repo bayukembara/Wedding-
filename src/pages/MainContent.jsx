@@ -12,10 +12,10 @@ export default function MainContent() {
     <>
       <Home />
       <Quote />
-      <TimeLine />
       <Hero />
       <Events />
       <Location />
+      <TimeLine />
       <Gifts />
       <Wishes />
     </>

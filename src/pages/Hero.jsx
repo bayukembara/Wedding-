@@ -49,43 +49,51 @@ export default function Hero() {
   };
 
   const FloatingHearts = () => {
+    const heartCount = 40; // lebih banyak heart
+
+    const colors = [
+      "text-red-500",
+      "text-pink-500",
+      "text-rose-500",
+      "text-fuchsia-500",
+    ];
+    const sizes = ["w-6 h-6", "w-8 h-8", "w-10 h-10"]; // variasi ukuran
+
     return (
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(8)].map((_, i) => (
-          <motion.div
-            key={i}
-            initial={{
-              opacity: 0,
-              scale: 0,
-              x: Math.random() * window.innerWidth,
-              y: window.innerHeight,
-            }}
-            animate={{
-              opacity: [0, 1, 1, 0],
-              scale: [0, 1, 1, 0.5],
-              x: Math.random() * window.innerWidth,
-              y: -100,
-            }}
-            transition={{
-              duration: 4,
-              repeat: Infinity,
-              delay: i * 0.8,
-              ease: "easeOut",
-            }}
-            className="absolute"
-          >
-            <Heart
-              className={`w-${Math.floor(Math.random() * 2) + 8} h-${Math.floor(Math.random() * 2) + 8} ${
-                i % 3 === 0
-                  ? "text-rose-400"
-                  : i % 3 === 1
-                    ? "text-pink-400"
-                    : "text-red-400"
-              }`}
-              fill="currentColor"
-            />
-          </motion.div>
-        ))}
+        {[...Array(heartCount)].map((_, i) => {
+          const sizeClass = sizes[Math.floor(Math.random() * sizes.length)];
+          const colorClass = colors[i % colors.length];
+          const startX = Math.random() * window.innerWidth;
+          const endX = startX + (Math.random() * 100 - 50); // sedikit drift
+
+          return (
+            <motion.div
+              key={i}
+              initial={{
+                opacity: 0,
+                scale: 0,
+                x: startX,
+                y: window.innerHeight,
+              }}
+              animate={{
+                opacity: [0, 1, 1, 0],
+                scale: [0.5, 1, 1, 0.5],
+                x: endX,
+                y: -100,
+              }}
+              transition={{
+                duration: 6 + Math.random() * 2, // lambat & sedikit variasi
+                repeat: Infinity,
+                delay: i * 0.3, // lebih sering muncul
+                ease: "easeInOut",
+              }}
+              className={`absolute ${sizeClass} ${colorClass}`}
+            >
+              <Heart fill="currentColor" className="w-full h-full" />
+            </motion.div>
+          );
+        })}
       </div>
     );
   };
@@ -115,7 +123,7 @@ export default function Hero() {
             transition={{ delay: 0.2 }}
             className="inline-block mx-auto"
           >
-            <span className="px-4 py-1 text-sm bg-[#804100]/30 text-[#fcfcfc] rounded-full border border-[#492807]">
+            <span className="px-4 py-1 text-sm bg-[#804100]/30 text-[#fcfcfc] font-light rounded-full border border-[#492807]">
               Catat Tanggal Penting Ini
             </span>
           </motion.div>
@@ -125,7 +133,7 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
-              className="text-white font-light italic text-base sm:text-lg"
+              className="text-white font-normal italic text-base sm:text-lg"
             >
               InsyaAllah Kami Akan Menikah
             </motion.p>
@@ -149,7 +157,7 @@ export default function Hero() {
           >
             <div className="absolute inset-0 bg-white/30 backdrop-blur-sm rounded-2xl" />
 
-            <div className="relative px-4 sm:px-8 py-8 sm:py-10 rounded-2xl border border-orange-300/50">
+            <div className="relative px-4 sm:px-8 py-8 sm:py-10 rounded-2xl bg-gradient-to-r from-transparent via-orange-300 to-transparent border border-orange-300/50">
               <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-px">
                 <div className="w-20 sm:w-32 h-[2px] bg-gradient-to-r from-transparent via-orange-300 to-transparent" />
               </div>
@@ -162,8 +170,8 @@ export default function Hero() {
                     transition={{ delay: 0.9 }}
                     className="flex items-center justify-center space-x-2"
                   >
-                    <Calendar className="w-4 h-4 text-white drop-shadow-[2px_2px_0_black]" />
-                    <span className="text-white drop-shadow-[2px_2px_0_black] font-medium text-sm sm:text-base">
+                    <Calendar className="w-4 h-4 text-[#4e2915] " />
+                    <span className="text-[#4e2915] font-medium text-sm sm:text-base">
                       {formatEventDate(config.data.date, "full")}
                     </span>
                   </motion.div>
@@ -174,8 +182,8 @@ export default function Hero() {
                     transition={{ delay: 1 }}
                     className="flex items-center justify-center space-x-2"
                   >
-                    <Clock className="w-4 h-4 text-white drop-shadow-[2px_2px_0_black]" />
-                    <span className="text-white drop-shadow-[2px_2px_0_black]  font-medium text-sm sm:text-base">
+                    <Clock className="w-4 h-4 text-[#4e2915]" />
+                    <span className="text-[#4e2915]  font-medium text-sm sm:text-base">
                       {config.data.time}
                     </span>
                   </motion.div>
@@ -201,13 +209,13 @@ export default function Hero() {
                 rotate: [0, 5, -5, 0],
               }}
               transition={{
-                duration: 2,
+                duration: 4,
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
             >
               <Heart
-                className="w-10 sm:w-12 h-10 sm:h-12 text-rose-500 mx-auto"
+                className="w-10 sm:w-12 h-10 sm:h-12 text-rose-600 mx-auto"
                 fill="currentColor"
               />
             </motion.div>

@@ -10,11 +10,11 @@ function TimeLine() {
       id="timeline"
       className="min-h-screen flex flex-col px-1 py-2 sm:py-5 text-center relative overflow-hidden"
     >
-      <motion.div className="absolute inset-0 w-full h-full">
+      <motion.div className="absolute inset-0 w-full  h-full">
         <img
           src={config.data.background_base}
           alt="home"
-          className="w-screen h-screen object-fill flex items-center justify-center"
+          className="w-full h-full object-cover flex items-center justify-center"
         />
       </motion.div>
       <motion.div
@@ -32,7 +32,7 @@ function TimeLine() {
               type: "spring",
               stiffness: 100,
             }}
-            className="text-xl font-bold mb-4 z-10 text-[#a84e1d]"
+            className="text-2xl font-bold mb-4 z-10 text-[#fd6412] drop-shadow-[2px_2px_#461e08]"
           >
             Perjalanan Cinta Kami
           </motion.h2>
