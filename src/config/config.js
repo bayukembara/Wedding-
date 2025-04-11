@@ -69,6 +69,7 @@ const config = {
     background_img: "/images/base_bg.jpg",
     background_home: "/images/home.jpg",
     background_base: "/images/base.jpg",
+    background_landing: "images/base_landing.jpg",
     timelineData: [
       {
         id: 1,

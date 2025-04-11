@@ -21,19 +21,17 @@ const LandingPage = ({ onOpenInvitation }) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="min-h-screen relative overflow-hidden"
+      className="min-h-screen flex flex-col items-center justify-center text-center relative overflow-hidden"
     >
-      {/* Decorative Background */}
-      {/* <img
-        src={config.data.background_img}
-        className="absolute inset-0 h-full w-full object-cover"
-      /> */}
-      <div className="absolute inset-0 bg-gradient-to-b from-gray-500/50 via-blue-50/40 to-black/100" />
-      <div className="absolute top-0 right-0 w-64 h-64 md:w-96 md:h-96 bg-sky-100/20 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2" />
-      <div className="absolute bottom-0 left-0 w-64 h-64 md:w-96 md:h-96 bg-pink-100/20 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2" />
-
       {/* Main Content */}
       <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4">
+        <motion.div className="absolute inset-0 w-full h-full">
+          <img
+            src={config.data.background_landing}
+            alt="home"
+            className="w-screen h-screen object-fit flex items-center justify-center"
+          />
+        </motion.div>
         <motion.div className="w-full h-screen flex items-center justify-center">
           {/* Card Container with Video */}
           <div className="relative h-screen w-96">
