@@ -85,7 +85,7 @@ const BottomBar = () => {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, type: "spring", stiffness: 100 }}
     >
-      <div className="backdrop-blur-md bg-white/90 border border-gray-200/80 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.07)] overflow-x-visible w-[100%]">
+      <div className="backdrop-blur-md bg-white/90 border border-gray-200/80 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.07)] overflow-x-visible w-[96%] xl:w-[100%]">
         <nav className="flex items-center overflow-x-auto scrollbar-thin scrollbar-thumb-gray-200 scrollbar-track-transparent px-4 py-2">
           <div className="flex justify-between items-center w-full gap-2">
             {menuItems.map((item) => (
