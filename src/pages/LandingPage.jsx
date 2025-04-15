@@ -48,14 +48,14 @@ const LandingPage = ({ onOpenInvitation }) => {
                   </h1>
 
                   <div className="flex items-center justify-center gap-3 mb-4">
-                    <div className="h-px w-12 bg-sky-200/50" />
-                    <div className="w-2 h-2 rounded-full bg-sky-300" />
-                    <div className="h-px w-12 bg-sky-200/50" />
+                    <div className="h-px w-12 bg-[#a84e1d]/50" />
+                    <div className="w-2 h-2 rounded-full bg-[#a84e1d]" />
+                    <div className="h-px w-12 bg-[#a84e1d]/50" />
                   </div>
 
                   <h2 className="text-2xl font-serif text-gray-800 leading-tight uppercase mb-4">
                     {config.data.groomName}
-                    <span className="text-sky-400 mx-2">&</span>
+                    <span className="text-[#e78d5d] mx-2">&</span>
                     {config.data.brideName}
                   </h2>
 
@@ -68,7 +68,7 @@ const LandingPage = ({ onOpenInvitation }) => {
                     <p className="text-black font-serif italic text-md">
                       To the Honorable
                     </p>
-                    <p className="font-medium text-lg text-sky-600">
+                    <p className="font-medium text-lg text-[#cc591b]">
                       {guestName ? guestName : "Guest"}
                     </p>
                   </motion.div>
@@ -85,7 +85,7 @@ const LandingPage = ({ onOpenInvitation }) => {
                       ease: "easeInOut",
                     }}
                     onClick={onOpenInvitation}
-                    className="w-full bg-sky-500 text-white px-6 py-2 rounded-lg font-medium hover:bg-sky-600 transition-all duration-200"
+                    className="w-full bg-[#a84e1d] text-white px-6 py-2 rounded-lg font-medium hover:bg-[#a14615] transition-all duration-200"
                   >
                     <span className="flex items-center justify-center gap-2">
                       <span className="text-white from-white via-sky-50/30 to-black">

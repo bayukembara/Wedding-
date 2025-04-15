@@ -41,8 +41,9 @@ const config = {
       },
     ],
     audio: {
-      src: "/audio/fulfilling-humming.mp3",
-      title: "Fulfilling Humming",
+      src: "/audio/bg_music.mp3",
+      title: "Maher Zain - For The Rest Of My Life",
+      artist: "Maher Zain",
       autoplay: true,
       loop: true,
     },
@@ -51,11 +52,13 @@ const config = {
         bank: "Blu Digital",
         accountNumber: "1234567890",
         accountName: "Bayu Kembara",
+        icon: "/images/bank/blu.png",
       },
       {
         bank: "Bank Jago",
         accountNumber: "0987654321",
         accountName: "Hanisah Damayanti",
+        icon: "/images/bank/jago.png",
       },
     ],
     background: {

@@ -33,7 +33,7 @@ export default function Gifts() {
               initial={{ opacity: 0, y: 10 }}
               animate={hasAnimated ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.2 }}
-              className="inline-block text-rose-500 font-medium"
+              className="inline-block text-[#a84e1d] font-medium"
             >
               Hadiah Pernikahan
             </motion.span>
@@ -54,9 +54,9 @@ export default function Gifts() {
               transition={{ delay: 0.4 }}
               className="flex items-center justify-center gap-4 pt-4"
             >
-              <div className="h-[1px] w-12 bg-rose-200" />
-              <Gift className="w-5 h-5 text-rose-400" />
-              <div className="h-[1px] w-12 bg-rose-200" />
+              <div className="h-[1px] w-12 bg-[#ce5b1d]" />
+              <Gift className="w-5 h-5 text-[#a84e1d]" />
+              <div className="h-[1px] w-12 bg-[#ce5b1d]" />
             </motion.div>
 
             {/* Message Container */}
@@ -114,7 +114,11 @@ export default function Gifts() {
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-4">
                       <div className="w-12 h-12 rounded-lg bg-white p-2 shadow-sm">
-                        <Building2 className="w-full h-full text-rose-500" />
+                        <img
+                          src={account.icon}
+                          alt={account.bank}
+                          className="w-full h-full object-contain"
+                        />
                       </div>
                       <div>
                         <h3 className="font-medium text-gray-800">
@@ -125,7 +129,7 @@ export default function Gifts() {
                         </p>
                       </div>
                     </div>
-                    <Wallet className="w-5 h-5 text-rose-400" />
+                    <Wallet className="w-5 h-5 text-[#a84e1d]" />
                   </div>
 
                   <div className="mt-4">
@@ -139,7 +143,7 @@ export default function Gifts() {
                         onClick={() =>
                           copyToClipboard(account.accountNumber, account.bank)
                         }
-                        className="flex items-center space-x-1 text-rose-500 hover:text-rose-600"
+                        className="flex items-center space-x-1 text-[#a84e1d] hover:text-[#a84e1d]"
                       >
                         {copiedAccount === account.bank ? (
                           <CheckCircle className="w-4 h-4" />
