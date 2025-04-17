@@ -50,20 +50,20 @@ const config = {
     banks: [
       {
         bank: "Blu Digital",
-        accountNumber: "1234567890",
+        accountNumber: "009442144029",
         accountName: "Bayu Kembara",
         icon: "/images/bank/blu.png",
       },
       {
         bank: "Bank Jago",
-        accountNumber: "0987654321",
+        accountNumber: "104448442107",
         accountName: "Hanisah Damayanti",
         icon: "/images/bank/jago.png",
       },
     ],
     background: {
       type: "video",
-      src: "/video/base_bg.mp4",
+      src: "/video/base.mp4",
       autoplay: true,
       muted: true,
       loop: true,

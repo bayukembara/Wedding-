@@ -83,7 +83,7 @@ export default function Wishes() {
       case "attending":
         return <CheckCircle className="w-4 h-4 text-emerald-500" />;
       case "not-attending":
-        return <XCircle className="w-4 h-4 text-rose-500" />;
+        return <XCircle className="w-4 h-4 text-[#995028]" />;
       case "maybe":
         return <HelpCircle className="w-4 h-4 text-amber-500" />;
       default:
@@ -106,7 +106,7 @@ export default function Wishes() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="inline-block text-rose-500 font-medium"
+              className="inline-block text-[#995028] font-medium"
             >
               Kirimkan Doa dan Harapan Terbaik Anda
             </motion.span>
@@ -127,9 +127,9 @@ export default function Wishes() {
               transition={{ delay: 0.4 }}
               className="flex items-center justify-center gap-4 pt-4"
             >
-              <div className="h-[1px] w-12 bg-rose-200" />
-              <MessageCircle className="w-5 h-5 text-rose-400" />
-              <div className="h-[1px] w-12 bg-rose-200" />
+              <div className="h-[1px] w-12 bg-[#a84e1d]/30" />
+              <MessageCircle className="w-5 h-5 text-[#995028]" />
+              <div className="h-[1px] w-12 bg-[#a84e1d]/30" />
             </motion.div>
           </motion.div>
 
@@ -159,7 +159,7 @@ export default function Wishes() {
                       <div className="flex items-start space-x-3 mb-2">
                         {/* Avatar */}
                         <div className="flex-shrink-0">
-                          <div className="w-8 h-8 rounded-full bg-gradient-to-r from-rose-400 to-pink-400 flex items-center justify-center text-white text-sm font-medium">
+                          <div className="w-8 h-8 rounded-full bg-gradient-to-r from-[#995028] to-[#a04717] flex items-center justify-center text-white text-sm font-medium">
                             {wish.name[0].toUpperCase()}
                           </div>
                         </div>
@@ -190,7 +190,7 @@ export default function Wishes() {
                       {Date.now() - new Date(wish.timestamp).getTime() <
                         3600000 && (
                         <div className="absolute top-2 right-2">
-                          <span className="px-2 py-1 rounded-full bg-rose-100 text-rose-600 text-xs font-medium">
+                          <span className="px-2 py-1 rounded-full bg-rose-100 text-[#995028] text-xs font-medium">
                             New
                           </span>
                         </div>
@@ -317,7 +317,7 @@ export default function Wishes() {
                     ${
                       isSubmitting
                         ? "bg-gray-300 cursor-not-allowed"
-                        : "bg-rose-500 hover:bg-rose-600"
+                        : "bg-[#995028] hover:bg-[#4e2915]"
                     }`}
                   >
                     <Send className="w-4 h-4" />
