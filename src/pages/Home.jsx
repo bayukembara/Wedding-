@@ -17,7 +17,6 @@ export default function Home() {
           src={config.data.background.src}
           autoPlay={config.data.background.autoplay}
           muted={config.data.background.muted}
-          loop={config.data.background.loop}
           playsInline={config.data.background.playsinline}
           className="w-screen h-screen object-cover"
         />
