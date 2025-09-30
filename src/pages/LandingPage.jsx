@@ -37,7 +37,7 @@ const LandingPage = ({ onOpenInvitation }) => {
           <div className="relative h-screen w-96">
             {/* Center Small Card */}
             <div className="absolute inset-0 flex items-center justify-center mt-[200px]">
-              <div className="bg-white/60 flex p-8 rounded-xl w-[85%] md:w-[90%] items-center justify-center">
+              <div className="bg-white/0 flex p-8 rounded-xl w-[85%] md:w-[90%] items-center justify-center">
                 {/* Card Content */}
                 <div className="text-center w-full">
                   <h1 className="text-center font-bold text-xl uppercase mb-4">
@@ -68,7 +68,7 @@ const LandingPage = ({ onOpenInvitation }) => {
                     <p className="text-black font-bold italic text-md">
                       To the Honorable
                     </p>
-                    <p className="font-bold text-[30px] text-[#06A77D] border-2 border-transparent border-b-black pb-1 px-4 inline-block">
+                    <p className="bg-[000000]/90 rounded font-bold text-[30px] text-[#06A77D] border-2 border-transparent border-b-black pb-1 px-4 inline-block">
                       {guestName ? guestName : "Guest"}
                     </p>
                   </motion.div>
