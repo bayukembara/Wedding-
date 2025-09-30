@@ -34,10 +34,10 @@ const LandingPage = ({ onOpenInvitation }) => {
         </motion.div>
         <motion.div className="w-full h-screen flex items-center justify-center">
           {/* Card Container with Video */}
-          <div className="relative h-screen w-[30rem]">
+          <div className="relative h-screen w-96">
             {/* Center Small Card */}
             <div className="absolute inset-0 flex items-center justify-center mt-[200px]">
-              <div className="bg-white/50 flex p-8 rounded-xl w-[90%] md:w-[90%] items-center justify-center">
+              <div className="bg-white/60 flex p-8 rounded-xl w-[85%] md:w-[90%] items-center justify-center">
                 {/* Card Content */}
                 <div className="text-center w-full">
                   <h1 className="text-center font-bold text-xl uppercase mb-4">
@@ -48,9 +48,9 @@ const LandingPage = ({ onOpenInvitation }) => {
                   </h1>
 
                   <div className="flex items-center justify-center gap-3 mb-4">
-                    <div className="h-px w-12 bg-[#06A77D]" />
+                    <div className="h-px w-12 bg-[#06A77D]/50" />
                     <div className="w-2 h-2 rounded-full bg-[#06A77D]" />
-                    <div className="h-px w-12 bg-[#06A77D]" />
+                    <div className="h-px w-12 bg-[#06A77D]/50" />
                   </div>
 
                   <h2 className="text-2xl font-bold text-gray-800 leading-tight uppercase mb-4">
@@ -68,7 +68,7 @@ const LandingPage = ({ onOpenInvitation }) => {
                     <p className="text-black font-bold italic text-md">
                       To the Honorable
                     </p>
-                    <p className="font-bold text-[40px] rounded-full border-4 border-t-transparent border-r-transparent border-l-transparent border-b-black text-[#06A77D] shadow-lg">
+                    <p className="font-bold text-[30px] text-[#06A77D] border-2 border-transparent border-b-black pb-1 px-4 inline-block">
                       {guestName ? guestName : "Guest"}
                     </p>
                   </motion.div>
@@ -85,17 +85,17 @@ const LandingPage = ({ onOpenInvitation }) => {
                       ease: "easeInOut",
                     }}
                     onClick={onOpenInvitation}
-                    className="w-full bg-[#b1e5cd] text-white px-6 py-2 rounded-lg font-medium hover:bg-[#06A77D] transition-all duration-200"
+                    className="w-full bg-[#06A77D] text-white px-6 py-2 rounded-lg font-medium hover:bg-[#a14615] transition-all duration-200"
                   >
                     <span className="flex items-center justify-center gap-2">
-                      <span className="text-black from-black via-sky-50/30 to-black">
+                      <span className="text-white from-white via-sky-50/30 to-black">
                         Buka Undangan
                       </span>
                       <motion.span
                         animate={{ x: [0, 4, 0] }}
                         transition={{ repeat: Infinity, duration: 1.5 }}
                       >
-                        <span className="text-black">→</span>
+                        →
                       </motion.span>
                     </span>
                   </motion.button>
