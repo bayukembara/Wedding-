@@ -49,10 +49,10 @@ const config = {
     },
     banks: [
       {
-        bank: "Blu Digital",
-        accountNumber: "009442144029",
+        bank: "Bank Jago",
+        accountNumber: "500976554918",
         accountName: "Bayu Kembara",
-        icon: "/images/bank/blu.png",
+        icon: "/images/bank/jago.png",
       },
       {
         bank: "Bank Jago",
@@ -72,7 +72,7 @@ const config = {
     background_img: "/images/base_bg.jpg",
     background_home: "/images/home.jpg",
     background_base: "/images/base.jpg",
-    background_landing: "images/base_landing.jpg",
+    background_landing: "images/homebase.jpg",
     timelineData: [
       {
         id: 1,
