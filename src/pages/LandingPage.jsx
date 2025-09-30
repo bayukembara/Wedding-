@@ -29,7 +29,7 @@ const LandingPage = ({ onOpenInvitation }) => {
           <img
             src={config.data.background_landing}
             alt="home"
-            className="w-screen h-screen object-fit flex items-center justify-center"
+            className="w-screen h-screen object-cover flex items-center justify-center"
           />
         </motion.div>
         <motion.div className="w-full h-screen flex items-center justify-center">
