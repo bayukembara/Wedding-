@@ -36,8 +36,8 @@ const LandingPage = ({ onOpenInvitation }) => {
           {/* Card Container with Video */}
           <div className="relative h-screen w-96">
             {/* Center Small Card */}
-            <div className="absolute inset-0 flex items-center justify-center mt-[200px]">
-              <div className="bg-white/0 flex p-8 rounded-xl w-[85%] md:w-[90%] items-center justify-center">
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="bg-white/50 flex p-8 rounded-xl w-[85%] md:w-[90%] items-center justify-center">
                 {/* Card Content */}
                 <div className="text-center w-full">
                   <h1 className="text-center font-bold text-xl uppercase mb-4">
