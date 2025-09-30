@@ -21,10 +21,10 @@ const LandingPage = ({ onOpenInvitation }) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="min-h-screen flex flex-col items-center justify-center text-center relative overflow-hidden"
+      className="min-h-screen flex flex-col items-center justify-center text-center relative overflow-y-auto no-scrollbar"
     >
       {/* Main Content */}
-      <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4">
+      <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4 overflow-hidden">
         <motion.div className="absolute inset-0 w-full h-full">
           <img
             src={config.data.background_landing}
@@ -36,26 +36,26 @@ const LandingPage = ({ onOpenInvitation }) => {
           {/* Card Container with Video */}
           <div className="relative h-screen w-96">
             {/* Center Small Card */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="bg-white/0 flex p-8 rounded-xl w-[80%] md:w-[90%] items-center justify-center">
+            <div className="absolute inset-0 flex items-center justify-center mt-[200px]">
+              <div className="bg-white/60 flex p-8 rounded-xl w-[85%] md:w-[90%] items-center justify-center">
                 {/* Card Content */}
                 <div className="text-center w-full">
-                  <h1 className="text-center font-serif font-light text-xl uppercase mb-4">
+                  <h1 className="text-center font-bold text-xl uppercase mb-4">
                     Celebration the love
-                    <p className="text-center font-serif font-light text-xl my-2 uppercase">
+                    <p className="text-center font-bold text-xl my-2 uppercase">
                       of
                     </p>
                   </h1>
 
                   <div className="flex items-center justify-center gap-3 mb-4">
-                    <div className="h-px w-12 bg-[#a84e1d]/50" />
-                    <div className="w-2 h-2 rounded-full bg-[#a84e1d]" />
-                    <div className="h-px w-12 bg-[#a84e1d]/50" />
+                    <div className="h-px w-12 bg-[#06A77D]/50" />
+                    <div className="w-2 h-2 rounded-full bg-[#06A77D]" />
+                    <div className="h-px w-12 bg-[#06A77D]/50" />
                   </div>
 
-                  <h2 className="text-2xl font-serif text-gray-800 leading-tight uppercase mb-4">
+                  <h2 className="text-2xl font-bold text-gray-800 leading-tight uppercase mb-4">
                     {config.data.groomName}
-                    <span className="text-[#e78d5d] mx-2">&</span>
+                    <span className="text-[#06A77D] mx-2">&</span>
                     {config.data.brideName}
                   </h2>
 
@@ -65,10 +65,10 @@ const LandingPage = ({ onOpenInvitation }) => {
                     transition={{ delay: 1.1 }}
                     className="space-y-2 mb-4"
                   >
-                    <p className="text-black font-serif italic text-md">
+                    <p className="text-black font-bold italic text-md">
                       To the Honorable
                     </p>
-                    <p className="font-medium text-lg text-[#cc591b]">
+                    <p className="font-bold text-[30px] text-[#06A77D] border-2 border-transparent border-b-black pb-1 px-4 inline-block">
                       {guestName ? guestName : "Guest"}
                     </p>
                   </motion.div>
@@ -85,7 +85,7 @@ const LandingPage = ({ onOpenInvitation }) => {
                       ease: "easeInOut",
                     }}
                     onClick={onOpenInvitation}
-                    className="w-full bg-[#a84e1d] text-white px-6 py-2 rounded-lg font-medium hover:bg-[#a14615] transition-all duration-200"
+                    className="w-full bg-[#06A77D] text-white px-6 py-2 rounded-lg font-medium hover:bg-[#a14615] transition-all duration-200"
                   >
                     <span className="flex items-center justify-center gap-2">
                       <span className="text-white from-white via-sky-50/30 to-black">
