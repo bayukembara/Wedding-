@@ -73,7 +73,7 @@ function App() {
         <meta name="theme-color" content="#FDA4AF" /> {/* Rose-300 color */}
       </Helmet>
 
-      <AnimatePresence mode='wait'>
+      <AnimatePresence mode='wait' className="overflow-y-hidden">
         {!isInvitationOpen ? (
           <LandingPage onOpenInvitation={() => setIsInvitationOpen(true)} />
         ) : (
