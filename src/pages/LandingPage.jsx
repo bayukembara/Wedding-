@@ -21,7 +21,7 @@ const LandingPage = ({ onOpenInvitation }) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="min-h-screen flex flex-col items-center justify-center text-center relative overflow-y-auto no-scrollbar"
+      className="min-h-screen flex flex-col items-center justify-center min-w-screen text-center relative overflow-hidden"
     >
       {/* Main Content */}
       <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4 overflow-hidden">
