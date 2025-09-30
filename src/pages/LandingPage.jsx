@@ -34,28 +34,28 @@ const LandingPage = ({ onOpenInvitation }) => {
         </motion.div>
         <motion.div className="w-full h-screen flex items-center justify-center">
           {/* Card Container with Video */}
-          <div className="relative h-screen w-96">
+          <div className="relative h-screen w-[30rem]">
             {/* Center Small Card */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="bg-white/0 flex p-8 rounded-xl w-[80%] md:w-[90%] items-center justify-center">
+            <div className="absolute inset-0 flex items-center justify-center mt-[200px]">
+              <div className="bg-white/50 flex p-8 rounded-xl w-[90%] md:w-[90%] items-center justify-center">
                 {/* Card Content */}
                 <div className="text-center w-full">
-                  <h1 className="text-center font-serif font-light text-xl uppercase mb-4">
+                  <h1 className="text-center font-bold text-xl uppercase mb-4">
                     Celebration the love
-                    <p className="text-center font-serif font-light text-xl my-2 uppercase">
+                    <p className="text-center font-bold text-xl my-2 uppercase">
                       of
                     </p>
                   </h1>
 
                   <div className="flex items-center justify-center gap-3 mb-4">
-                    <div className="h-px w-12 bg-[#a84e1d]/50" />
-                    <div className="w-2 h-2 rounded-full bg-[#a84e1d]" />
-                    <div className="h-px w-12 bg-[#a84e1d]/50" />
+                    <div className="h-px w-12 bg-[#06A77D]" />
+                    <div className="w-2 h-2 rounded-full bg-[#06A77D]" />
+                    <div className="h-px w-12 bg-[#06A77D]" />
                   </div>
 
-                  <h2 className="text-2xl font-serif text-gray-800 leading-tight uppercase mb-4">
+                  <h2 className="text-2xl font-bold text-gray-800 leading-tight uppercase mb-4">
                     {config.data.groomName}
-                    <span className="text-[#e78d5d] mx-2">&</span>
+                    <span className="text-[#06A77D] mx-2">&</span>
                     {config.data.brideName}
                   </h2>
 
@@ -65,10 +65,10 @@ const LandingPage = ({ onOpenInvitation }) => {
                     transition={{ delay: 1.1 }}
                     className="space-y-2 mb-4"
                   >
-                    <p className="text-black font-serif italic text-md">
+                    <p className="text-black font-bold italic text-md">
                       To the Honorable
                     </p>
-                    <p className="font-medium text-lg text-[#cc591b]">
+                    <p className="font-bold text-[40px] rounded-full border-4 border-t-transparent border-r-transparent border-l-transparent border-b-black text-[#06A77D] shadow-lg">
                       {guestName ? guestName : "Guest"}
                     </p>
                   </motion.div>
@@ -85,17 +85,17 @@ const LandingPage = ({ onOpenInvitation }) => {
                       ease: "easeInOut",
                     }}
                     onClick={onOpenInvitation}
-                    className="w-full bg-[#a84e1d] text-white px-6 py-2 rounded-lg font-medium hover:bg-[#a14615] transition-all duration-200"
+                    className="w-full bg-[#b1e5cd] text-white px-6 py-2 rounded-lg font-medium hover:bg-[#06A77D] transition-all duration-200"
                   >
                     <span className="flex items-center justify-center gap-2">
-                      <span className="text-white from-white via-sky-50/30 to-black">
+                      <span className="text-black from-black via-sky-50/30 to-black">
                         Buka Undangan
                       </span>
                       <motion.span
                         animate={{ x: [0, 4, 0] }}
                         transition={{ repeat: Infinity, duration: 1.5 }}
                       >
-                        →
+                        <span className="text-black">→</span>
                       </motion.span>
                     </span>
                   </motion.button>
