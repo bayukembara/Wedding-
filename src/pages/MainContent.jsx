@@ -1,5 +1,6 @@
 import Hero from "@/pages/Hero";
 import Home from "@/pages/Home";
+import DetailGroom from "@/pages/DetailGroom";
 import Events from "@/pages/Events";
 import Location from "@/pages/Location";
 import Wishes from "@/pages/Wishes";
@@ -12,6 +13,7 @@ export default function MainContent() {
     <>
       <Home />
       <Quote />
+      <DetailGroom/>
       <Hero />
       <Events />
       <Location />

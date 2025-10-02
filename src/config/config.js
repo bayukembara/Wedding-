@@ -71,6 +71,7 @@ const config = {
       playsinline: true,
     },
     background_img: "/images/base_bg.jpg",
+    background_detail_groom: "/images/detail.gif",
     background_home: "/images/home.jpg",
     background_base: "/images/base.jpg",
     background_landing: "images/homebase.jpg",
