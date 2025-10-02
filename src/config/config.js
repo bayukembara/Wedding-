@@ -46,6 +46,7 @@ const config = {
       artist: "Maher Zain",
       autoplay: true,
       loop: true,
+      volume: 0.5,
     },
     banks: [
       {

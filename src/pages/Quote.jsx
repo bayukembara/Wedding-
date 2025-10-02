@@ -13,10 +13,10 @@ function Home() {
         <img
           src={config.data.background_img}
           alt="home"
-          className="w-screen h-screen object-cover flex items-center justify-center"
+          className="w-screen h-screen object-fit flex items-center justify-center"
         />
       </motion.div>
-      <div className="relative z-10 flex flex-col items-center justify-center">
+      {/* <div className="relative z-10 flex flex-col items-center justify-center">
         <h1 className="text-[#a84e1d] text-2xl font-bold drop-shadow-md">
           Holy Qur'an
         </h1>
@@ -41,7 +41,7 @@ function Home() {
         <h2 className="text-xl text-[#a84e1d] italic font-medium mt-4">
           ~ Q.S. Ar - Rum:21 ~
         </h2>
-      </div>
+      </div> */}
     </section>
   );
 }
