@@ -68,7 +68,6 @@ const config = {
       autoplay: true,
       muted: true,
       loop: true,
-      playsinline: true,
     },
     background_quote: {
       type: "video",
@@ -76,7 +75,6 @@ const config = {
       autoplay: true,
       muted: true,
       loop: true,
-      playsinline: true,
     },
     background_img: "/images/base_bg.jpg",
     // background_detail_groom: {
