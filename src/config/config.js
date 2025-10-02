@@ -42,8 +42,8 @@ const config = {
     ],
     audio: {
       src: "/audio/bg_music.mp3",
-      title: "Maher Zain - For The Rest Of My Life",
-      artist: "Maher Zain",
+      title: "George Benson - Nothing's Gonna Change My Love For You",
+      artist: "George Benson",
       autoplay: true,
       loop: true,
       volume: 0.5,
