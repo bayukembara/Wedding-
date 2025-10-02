@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import {
   Home,
   Quote,
+  FileUser,
   BellRing,
   CalendarHeart,
   MapPin,
@@ -16,6 +17,7 @@ import { cn } from "@/lib/utils";
 const menuItems = [
   { icon: Home, label: "Beranda", href: "#home" },
   { icon: Quote, label: "Quote", href: "#quote" },
+  { icon: FileUser, label: "Info", href: "#detail_groom" },
   { icon: BellRing, label: "Jadwal", href: "#schedule" },
   { icon: CalendarHeart, label: "Acara", href: "#event" },
   { icon: MapPin, label: "Lokasi", href: "#location" },

@@ -70,11 +70,26 @@ const config = {
       loop: true,
       playsinline: true,
     },
+    background_quote: {
+      type: "video",
+      src: "/video/quote.mp4",
+      autoplay: true,
+      muted: true,
+      loop: true,
+      playsinline: true,
+    },
     background_img: "/images/base_bg.jpg",
-    background_detail_groom: "/images/detail.gif",
+    background_detail_groom: {
+      type: "video",
+      src: "/video/detail.mp4",
+      autoplay: true,
+      muted: true,
+      loop: true,
+      playsinline: true,
+    },
     background_home: "/images/home.jpg",
     background_base: "/images/base.jpg",
-    background_landing: "images/homebase.jpg",
+    background_landing: "/images/homebase.jpg",
     timelineData: [
       {
         id: 1,
