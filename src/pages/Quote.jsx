@@ -15,7 +15,7 @@ function Home() {
           autoPlay={config.data.background_quote.autoplay}
           muted={config.data.background_quote.muted}
           playsInline={config.data.background_quote.playsinline}
-          className="w-screen h-screen object-fit"
+          className="w-screen h-screen object-cover"
         />
       </motion.div>
       {/* <div className="relative z-10 flex flex-col items-center justify-center">
