@@ -18,7 +18,7 @@ export default function Home() {
           autoPlay={config.data.background.autoplay}
           muted={config.data.background.muted}
           playsInline={config.data.background.playsinline}
-          className="w-screen h-screen object-cover"
+          className="w-screen h-screen object-cover flex items-center justify-center"
         />
       </motion.div>
     </section>

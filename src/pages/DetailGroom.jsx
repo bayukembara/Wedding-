@@ -10,18 +10,18 @@ function Home() {
       className="min-h-screen flex flex-col items-center justify-center px-4 py-16 sm:py-20 text-center relative overflow-hidden"
     >
       <motion.div className="absolute inset-0 w-full h-full">
-        {/* <img
-          src={config.data.background_base}
+        <img
+          src={config.data.background_detail}
           alt="home"
           className="w-screen h-screen object-cover flex items-center justify-center"
-        /> */}
-        <video
+        />
+        {/* <video
           src={config.data.background_detail_groom.src}
           autoPlay={config.data.background_detail_groom.autoplay}
           muted={config.data.background_detail_groom.muted}
           playsInline={config.data.background_detail_groom.playsinline}
           className="w-screen h-screen object-cover"
-        />
+        /> */}
       </motion.div>
       {/* <div className="relative z-10 flex flex-col items-center justify-center">
         <h1 className="text-[#a84e1d] text-2xl font-bold drop-shadow-md">
