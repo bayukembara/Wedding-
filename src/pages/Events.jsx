@@ -1,9 +1,101 @@
 import EventCards from "@/components/EventsCard";
+import { useEffect, useState } from "react";
 import config from "@/config/config";
 import { motion } from "framer-motion";
 import { Heart } from "lucide-react";
 
 export default function Events() {
+  const CountdownTimer = ({ targetDate }) => {
+    const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+    function calculateTimeLeft() {
+      const difference = +new Date(targetDate) - +new Date();
+      let timeLeft = {};
+
+      if (difference > 0) {
+        timeLeft = {
+          hari: Math.floor(difference / (1000 * 60 * 60 * 24)),
+          jam: Math.floor((difference / (1000 * 60 * 60)) % 24),
+          menit: Math.floor((difference / 1000 / 60) % 60),
+          detik: Math.floor((difference / 1000) % 60),
+        };
+      }
+      return timeLeft;
+    }
+    useEffect(() => {
+      const timer = setInterval(() => {
+        setTimeLeft(calculateTimeLeft());
+      }, 1000);
+      return () => clearInterval(timer);
+    }, [targetDate]);
+
+    return (
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8">
+        {Object.keys(timeLeft).map((interval) => (
+          <motion.div
+            key={interval}
+            initial={{ scale: 0.5, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            className="flex flex-col items-center p-3 bg-white/80 backdrop-blur-sm rounded-xl border border-sky-100"
+          >
+            <span className="text-xl sm:text-2xl font-bold text-orange-600">
+              {timeLeft[interval]}
+            </span>
+            <span className="text-xs text-gray-500 capitalize">{interval}</span>
+          </motion.div>
+        ))}
+      </div>
+    );
+  };
+
+  const FloatingHearts = () => {
+    const heartCount = 40; // lebih banyak heart
+
+    const colors = [
+      "text-red-500",
+      "text-pink-500",
+      "text-rose-500",
+      "text-fuchsia-500",
+    ];
+    const sizes = ["w-6 h-6", "w-8 h-8", "w-10 h-10"]; // variasi ukuran
+
+    return (
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {[...Array(heartCount)].map((_, i) => {
+          const sizeClass = sizes[Math.floor(Math.random() * sizes.length)];
+          const colorClass = colors[i % colors.length];
+          const startX = Math.random() * window.innerWidth;
+          const endX = startX + (Math.random() * 100 - 50); // sedikit drift
+
+          return (
+            <motion.div
+              key={i}
+              initial={{
+                opacity: 0,
+                scale: 0,
+                x: startX,
+                y: window.innerHeight,
+              }}
+              animate={{
+                opacity: [0, 1, 1, 0],
+                scale: [0.5, 1, 1, 0.5],
+                x: endX,
+                y: -100,
+              }}
+              transition={{
+                duration: 6 + Math.random() * 2, // lambat & sedikit variasi
+                repeat: Infinity,
+                delay: i * 0.3, // lebih sering muncul
+                ease: "easeInOut",
+              }}
+              className={`absolute ${sizeClass} ${colorClass}`}
+            >
+              <Heart fill="currentColor" className="w-full h-full" />
+            </motion.div>
+          );
+        })}
+      </div>
+    );
+  };
   return (
     <>
       {/* Event Section */}
@@ -36,20 +128,9 @@ export default function Events() {
               }}
               className="inline-block text-white text-sm mb-2 bg-[#a84e1d]/30 rounded-full border border-black px-2 py-1"
             >
-              Catat Tanggal Penting Ini
+              Countdown to Our Special Day
             </motion.span>
-
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1 }}
-              className="text-4xl md:text-5xl leading-tight"
-            >
-              <h2 className="text-[#331809] font-semibold">
-                Rangkaian Acara Pernikahan
-              </h2>
-            </motion.h2>
-
+            <CountdownTimer targetDate={config.data.date} />
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -91,6 +172,25 @@ export default function Events() {
             className="max-w-2xl mx-auto"
           >
             <EventCards events={config.data.agenda} />
+            <div className="pt-6 relative">
+              <FloatingHearts />
+              <motion.div
+                animate={{
+                  scale: [1, 1.1, 1],
+                  rotate: [0, 5, -5, 0],
+                }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              >
+                <Heart
+                  className="w-10 sm:w-12 h-10 sm:h-12 text-rose-600 mx-auto"
+                  fill="currentColor"
+                />
+              </motion.div>
+            </div>
           </motion.div>
         </motion.div>
       </section>

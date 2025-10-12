@@ -13,8 +13,7 @@ export default function MainContent() {
     <>
       <Home />
       <Quote />
-      <DetailGroom/>
-      <Hero />
+      <DetailGroom />
       <Events />
       <Location />
       <TimeLine />
