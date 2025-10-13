@@ -37,7 +37,7 @@ export default function Events() {
             animate={{ scale: 1, opacity: 1 }}
             className="flex flex-col items-center p-3 bg-white/80 backdrop-blur-sm rounded-xl border border-sky-100"
           >
-            <span className="text-xl sm:text-2xl font-bold text-orange-600">
+            <span className="text-xl sm:text-2xl font-bold text-[#005377]">
               {timeLeft[interval]}
             </span>
             <span className="text-xs text-gray-500 capitalize">{interval}</span>
@@ -126,21 +126,28 @@ export default function Events() {
                 delay: 1,
                 type: "spring",
               }}
-              className="inline-block text-white text-sm mb-2 bg-[#a84e1d]/30 rounded-full border border-black px-2 py-1"
+              className="inline-block text-black text-sm mb-2 bg-[#06A77D]/30 rounded-full border border-black px-2 py-1"
             >
               Countdown to Our Special Day
             </motion.span>
-            <CountdownTimer targetDate={config.data.date} />
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 1 }}
               className="text-gray-500 max-w-md mx-auto"
             >
-              <p className="text-white font-normal rounded-xl px-1 py-1">
+              <p className="text-black font-normal rounded-xl px-1 py-1">
                 Kami Mengundang Anda untuk Merayakan Hari Istimewa Sebagai Awal
                 Perjalanan Cinta Kami
               </p>
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1 }}
+              className="text-gray-500 max-w-md mx-auto"
+            >
+              <CountdownTimer targetDate={config.data.date} />
             </motion.p>
 
             {/* Decorative Line */}

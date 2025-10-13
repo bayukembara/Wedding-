@@ -24,8 +24,8 @@ const config = {
       {
         title: "Akad Nikah",
         date: "2025-12-27",
-        startTime: "10:00",
-        endTime: "13:00",
+        startTime: "08:00",
+        endTime: "08:30",
         location: "Rumah Mempelai Wanita",
         address:
           "Ds/Dsn. Plosogeneng RT03 RW02 Kecamatan Jombang Kabupaten Jombang ",
@@ -33,8 +33,8 @@ const config = {
       {
         title: "Resepsi Nikah",
         date: "2025-12-27",
-        startTime: "10:00",
-        endTime: "13:00",
+        startTime: "12:00",
+        endTime: "Selesai",
         location: "Rumah Mempelai Wanita",
         address:
           "Ds/Dsn. Plosogeneng RT03 RW02 Kecamatan Jombang Kabupaten Jombang ",
@@ -77,17 +77,9 @@ const config = {
       loop: true,
     },
     background_img: "/images/base_bg.jpg",
-    // background_detail_groom: {
-    //   type: "video",
-    //   src: "/video/detail.mp4",
-    //   autoplay: true,
-    //   muted: true,
-    //   loop: true,
-    //   playsinline: true,
-    // },
     background_detail: "/images/detail.gif",
     background_home: "/images/home.jpg",
-    background_base: "/images/base.jpg",
+    background_base: "/images/event.jpg",
     background_landing: "/images/homebase.jpg",
     timelineData: [
       {
