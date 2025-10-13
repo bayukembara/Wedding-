@@ -21,11 +21,11 @@ export default function Gifts() {
   return (
     <>
       <section id="gifts" className="min-h-screen relative overflow-hidden">
-        <motion.div className="absolute inset-0 w-full  h-full">
+        <motion.div className="absolute inset-0 w-full h-full">
           <img
             src={config.data.background_base}
             alt="home"
-            className="w-full h-full object-cover flex items-center justify-center opacity-40"
+            className="w-full h-full object-cover flex items-center justify-center"
           />
         </motion.div>
         <div className="container mx-auto px-4 py-20 relative z-10">
