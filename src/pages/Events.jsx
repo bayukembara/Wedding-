@@ -37,7 +37,7 @@ export default function Events() {
             animate={{ scale: 1, opacity: 1 }}
             className="flex flex-col items-center p-3 bg-white/80 backdrop-blur-sm rounded-xl border border-sky-200"
           >
-            <span className="text-xl sm:text-2xl font-bold text-[#d1a575]">
+            <span className="text-xl sm:text-2xl font-bold text-[#e28725]">
               {timeLeft[interval]}
             </span>
             <span className="text-xs text-gray-500 capitalize">{interval}</span>
@@ -126,9 +126,11 @@ export default function Events() {
                 delay: 1,
                 type: "spring",
               }}
-              className="inline-block text-black text-sm mb-2 bg-[#d1a575]/30 rounded-full border border-black px-2 py-1"
+              className="inline-block text-black text-sm mb-2 bg-[#e28725]/40 rounded-full border border-black px-5 py-2 mb-0"
             >
-              Countdown to Our Special Day
+              <p className="text-lg font-medium">
+                Countdown to Our Special Day
+              </p>
             </motion.span>
             <motion.p
               initial={{ opacity: 0, y: 20 }}

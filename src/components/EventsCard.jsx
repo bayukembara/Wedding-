@@ -140,13 +140,13 @@ END:VCALENDAR`;
         transition={{ duration: 0.5 }}
       >
         <div className="flex justify-between items-center">
-          <h3 className="text-xl font-semibold text-[#d1a575]">
+          <h3 className="text-xl font-semibold text-[#e28725]">
             {eventData.title.split(" - ")[0]}
           </h3>
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="text-[#d1a575] hover:text-[#06A77D] transition-colors"
+            className="text-[#e28725] hover:text-[#06A77D] transition-colors"
             onClick={() => setShowCalendarModal(true)}
           >
             <CalendarPlus className="w-5 h-5" />
@@ -154,20 +154,20 @@ END:VCALENDAR`;
         </div>
         <div className="space-y-3 text-gray-600">
           <div className="flex items-center space-x-3">
-            <Calendar className="w-5 h-5 text-[#d1a575]" />
-            <span className="text-[#d1a575]">
+            <Calendar className="w-5 h-5 text-[#e28725]" />
+            <span className="text-[#e28725]">
               {formatEventDate(eventData.date)}
             </span>
           </div>
           <div className="flex items-center space-x-3">
-            <Clock className="w-5 h-5 text-[#d1a575]" />
-            <span className="text-[#d1a575]">
+            <Clock className="w-5 h-5 text-[#e28725]" />
+            <span className="text-[#e28725]">
               {eventData.startTime} - {eventData.endTime} WIB
             </span>
           </div>
           <div className="flex items-center space-x-3">
-            <MapPin className="w-5 h-5 text-[#d1a575]" />
-            <span className="text-[#d1a575]">{eventData.location}</span>
+            <MapPin className="w-5 h-5 text-[#e28725]" />
+            <span className="text-[#e28725]">{eventData.location}</span>
           </div>
         </div>
       </motion.div>
@@ -194,7 +194,7 @@ END:VCALENDAR`;
           <div className="space-y-3">
             <CalendarButton
               icon={(props) => (
-                <Chrome {...props} className="w-5 h-5 text-[#d1a575]" />
+                <Chrome {...props} className="w-5 h-5 text-[#e28725]" />
               )}
               label="Google Calendar"
               onClick={() => window.open(googleCalendarLink(), "_blank")}
