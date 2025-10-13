@@ -51,7 +51,7 @@ export default function Gifts() {
               transition={{ delay: 0.3 }}
               className="text-4xl md:text-5xl font-sans text-black"
             >
-              Kejutkan Kami
+              Tanda Kasih Untuk Kami
             </motion.h2>
 
             {/* Decorative Divider */}
