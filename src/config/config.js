@@ -80,6 +80,7 @@ const config = {
     background_detail: "/images/detail.gif",
     background_home: "/images/home.jpg",
     background_base: "/images/event.jpg",
+    background_default: "images/default.jpg",
     background_landing: "/images/homebase.jpg",
     timelineData: [
       {

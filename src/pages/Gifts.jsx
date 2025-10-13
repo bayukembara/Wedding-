@@ -21,6 +21,13 @@ export default function Gifts() {
   return (
     <>
       <section id="gifts" className="min-h-screen relative overflow-hidden">
+        <motion.div className="absolute inset-0 w-full  h-full">
+          <img
+            src={config.data.background_base}
+            alt="home"
+            className="w-full h-full object-cover flex items-center justify-center opacity-40"
+          />
+        </motion.div>
         <div className="container mx-auto px-4 py-20 relative z-10">
           {/* Section Header */}
           <motion.div
@@ -33,7 +40,7 @@ export default function Gifts() {
               initial={{ opacity: 0, y: 10 }}
               animate={hasAnimated ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.2 }}
-              className="inline-block text-[#a84e1d] font-medium"
+              className="inline-block text-[#005377] text-2xl font-medium"
             >
               Hadiah Pernikahan
             </motion.span>
@@ -42,7 +49,7 @@ export default function Gifts() {
               initial={{ opacity: 0, y: 20 }}
               animate={hasAnimated ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.3 }}
-              className="text-4xl md:text-5xl font-serif text-gray-800"
+              className="text-4xl md:text-5xl font-serif text-black"
             >
               Berikan Hadiah
             </motion.h2>
@@ -54,9 +61,9 @@ export default function Gifts() {
               transition={{ delay: 0.4 }}
               className="flex items-center justify-center gap-4 pt-4"
             >
-              <div className="h-[1px] w-12 bg-[#ce5b1d]" />
-              <Gift className="w-5 h-5 text-[#a84e1d]" />
-              <div className="h-[1px] w-12 bg-[#ce5b1d]" />
+              <div className="h-[1px] w-12 bg-[#005377]" />
+              <Gift className="w-5 h-5 text-[#018fcc]" />
+              <div className="h-[1px] w-12 bg-[#005377]" />
             </motion.div>
 
             {/* Message Container */}
@@ -64,23 +71,23 @@ export default function Gifts() {
               initial={{ opacity: 0 }}
               animate={hasAnimated ? { opacity: 1 } : {}}
               transition={{ delay: 0.5 }}
-              className="space-y-4 max-w-md mx-auto"
+              className="space-y-4 max-w-md mx-auto bg-white/60 px-2 py-2"
             >
               {/* Arabic InsyaAllah */}
-              <p className="font-arabic text-xl text-gray-800">إن شاء الله</p>
+              <p className="font-arabic text-xl text-[#005377]">إن شاء الله</p>
 
               {/* Main Message */}
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-[#005377]/100 font-medium leading-relaxed">
                 Insya Allah, Kehadiran anda adalah sesuatu yang kami tunggu,
                 tapi jika ingin memberi hadiah kami menyediakan dompet digital.
               </p>
 
               {/* Arabic Dua */}
               <div className="space-y-2">
-                <p className="font-arabic text-lg text-gray-800">
+                <p className="font-arabic text-lg text-[#005377] font-medium">
                   جزاكم الله خيرا وبارك الله فيكم
                 </p>
-                <p className="text-gray-600 italic text-sm">
+                <p className="text-[#005377] italic text-xl font-light">
                   Jazakumullahu khairan, Barakallah fiikum
                 </p>
               </div>
@@ -91,7 +98,7 @@ export default function Gifts() {
               initial={{ scale: 0 }}
               animate={hasAnimated ? { scale: 1 } : {}}
               transition={{ delay: 0.6 }}
-              className="flex items-center justify-center gap-3 pt-4"
+              className="flex items-center justify-center gap-3 pt-1"
             >
               <div className="h-px w-8 bg-rose-200/50" />
               <div className="w-1.5 h-1.5 rounded-full bg-rose-300" />
@@ -109,8 +116,8 @@ export default function Gifts() {
                 transition={{ delay: 0.2 * index + 0.7 }}
                 className="relative group"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-orange-200 to-transparent  rounded-2xl transform transition-transform group-hover:scale-105 duration-300" />
-                <div className="relative backdrop-blur-sm bg-orange-100/10 p-6 rounded-2xl border border-orange-100/50 shadow-lg">
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#005377]/20 to-transparent  rounded-2xl transform transition-transform group-hover:scale-105 duration-300" />
+                <div className="relative backdrop-blur-sm bg-orange-100/10 p-6 rounded-2xl border border-[#005377] shadow-lg">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-4">
                       <div className="w-12 h-12 rounded-lg bg-white p-2 shadow-sm">
@@ -121,15 +128,15 @@ export default function Gifts() {
                         />
                       </div>
                       <div>
-                        <h3 className="font-medium text-gray-800">
+                        <h3 className="font-medium text-[#003850]">
                           {account.bank}
                         </h3>
-                        <p className="text-sm text-gray-500">
+                        <p className="text-sm text-black">
                           {account.accountName}
                         </p>
                       </div>
                     </div>
-                    <Wallet className="w-5 h-5 text-[#a84e1d]" />
+                    <Wallet className="w-5 h-5 text-[#0fb1f7]" />
                   </div>
 
                   <div className="mt-4">
@@ -143,7 +150,7 @@ export default function Gifts() {
                         onClick={() =>
                           copyToClipboard(account.accountNumber, account.bank)
                         }
-                        className="flex items-center space-x-1 text-[#a84e1d] hover:text-[#a84e1d]"
+                        className="flex items-center space-x-1 text-[#0fb1f7] hover:text-[#0a729e]"
                       >
                         {copiedAccount === account.bank ? (
                           <CheckCircle className="w-4 h-4" />

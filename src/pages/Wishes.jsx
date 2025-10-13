@@ -1,4 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
+import config from "@/config/config";
 import Confetti from "react-confetti";
 import Marquee from "@/components/ui/marquee";
 import {
@@ -94,6 +95,13 @@ export default function Wishes() {
     <>
       <section id="wishes" className="min-h-screen relative overflow-hidden">
         {showConfetti && <Confetti recycle={false} numberOfPieces={200} />}
+        <motion.div className="absolute inset-0 w-full  h-full">
+          <img
+            src={config.data.background_base}
+            alt="home"
+            className="w-full h-full object-cover flex items-center justify-center"
+          />
+        </motion.div>
         <div className="container mx-auto px-4 py-20 relative z-10">
           {/* Section Header */}
           <motion.div
