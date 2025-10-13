@@ -114,7 +114,7 @@ export default function Wishes() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="inline-block text-[#995028] font-medium"
+              className="inline-block text-[#d1a575] font-medium"
             >
               Kirimkan Doa dan Harapan Terbaik Anda
             </motion.span>
@@ -123,7 +123,7 @@ export default function Wishes() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="text-4xl md:text-5xl font-serif text-gray-800"
+              className="text-4xl md:text-5xl font-sans text-gray-800"
             >
               Pesan dan Doa
             </motion.h2>
@@ -135,9 +135,9 @@ export default function Wishes() {
               transition={{ delay: 0.4 }}
               className="flex items-center justify-center gap-4 pt-4"
             >
-              <div className="h-[1px] w-12 bg-[#a84e1d]/30" />
-              <MessageCircle className="w-5 h-5 text-[#995028]" />
-              <div className="h-[1px] w-12 bg-[#a84e1d]/30" />
+              <div className="h-[1px] w-12 bg-[#d1a575]/30" />
+              <MessageCircle className="w-5 h-5 text-[#ffad55]" />
+              <div className="h-[1px] w-12 bg-[#d1a575]/30" />
             </motion.div>
           </motion.div>
 
@@ -325,7 +325,7 @@ export default function Wishes() {
                     ${
                       isSubmitting
                         ? "bg-gray-300 cursor-not-allowed"
-                        : "bg-[#995028] hover:bg-[#4e2915]"
+                        : "bg-[#d1a575] hover:bg-[#d48e42]"
                     }`}
                   >
                     <Send className="w-4 h-4" />

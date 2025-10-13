@@ -51,13 +51,13 @@ const config = {
     banks: [
       {
         bank: "Bank Jago",
-        accountNumber: "500976554918",
+        accountNumber: "5009 7655 4918",
         accountName: "Bayu Kembara",
         icon: "/images/bank/jago.png",
       },
       {
         bank: "Bank Jago",
-        accountNumber: "104448442107",
+        accountNumber: "1044 4844 2107",
         accountName: "Hanisah Damayanti",
         icon: "/images/bank/jago.png",
       },

@@ -105,7 +105,7 @@ const BottomBar = () => {
                   className={cn(
                     "h-[16px] w-[16px] sm:h-[18px] sm:w-[18px] mb-0.5 transition-colors duration-200",
                     active === item.href.substring(1)
-                      ? "stroke-[#005377]"
+                      ? "stroke-[#d1a575]"
                       : "stroke-gray-600"
                   )}
                 />
@@ -113,7 +113,7 @@ const BottomBar = () => {
                   className={cn(
                     "text-[9px] sm:text-[10px] font-medium transition-all duration-200 line-clamp-1",
                     active === item.href.substring(1)
-                      ? "scale-105 text-[#005377]"
+                      ? "scale-105 text-[#d1a575]"
                       : "scale-100"
                   )}
                 >
