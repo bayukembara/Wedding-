@@ -71,7 +71,7 @@ export default function Gifts() {
               initial={{ opacity: 0 }}
               animate={hasAnimated ? { opacity: 1 } : {}}
               transition={{ delay: 0.5 }}
-              className="space-y-4 max-w-md mx-auto bg-white/60 px-2 py-2"
+              className="space-y-4 max-w-md mx-auto"
             >
               {/* Arabic InsyaAllah */}
               <p className="font-arabic text-xl text-[#005377]">إن شاء الله</p>
