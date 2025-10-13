@@ -163,15 +163,15 @@ const Layout = ({ children }) => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           onClick={toggleMusic}
-          className="fixed top-4 right-4 z-50 bg-white/80 backdrop-blur-sm p-3 rounded-full shadow-lg border border-[#a84e1d]/50"
+          className="fixed top-4 right-4 z-50 bg-white/80 backdrop-blur-sm p-3 rounded-full shadow-lg border border-[#005377]/50"
         >
           {isPlaying ? (
             <div className="relative">
-              <PauseCircle className="w-6 h-6 text-[#a84e1d]" />
+              <PauseCircle className="w-6 h-6 text-[#005377]" />
               <span className="absolute -top-1 -right-1 w-2 h-2 bg-green-500 rounded-full animate-pulse" />
             </div>
           ) : (
-            <PlayCircle className="w-6 h-6 text-[#a84e1d]" />
+            <PlayCircle className="w-6 h-6 text-[#005377]" />
           )}
         </motion.button>
 

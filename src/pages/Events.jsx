@@ -35,9 +35,9 @@ export default function Events() {
             key={interval}
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            className="flex flex-col items-center p-3 bg-white/80 backdrop-blur-sm rounded-xl border border-sky-100"
+            className="flex flex-col items-center p-3 bg-white/80 backdrop-blur-sm rounded-xl border border-sky-200"
           >
-            <span className="text-xl sm:text-2xl font-bold text-[#005377]">
+            <span className="text-xl sm:text-2xl font-bold text-[#d1a575]">
               {timeLeft[interval]}
             </span>
             <span className="text-xs text-gray-500 capitalize">{interval}</span>
@@ -126,7 +126,7 @@ export default function Events() {
                 delay: 1,
                 type: "spring",
               }}
-              className="inline-block text-black text-sm mb-2 bg-[#06A77D]/30 rounded-full border border-black px-2 py-1"
+              className="inline-block text-black text-sm mb-2 bg-[#d1a575]/30 rounded-full border border-black px-2 py-1"
             >
               Countdown to Our Special Day
             </motion.span>

@@ -134,19 +134,19 @@ END:VCALENDAR`;
   return (
     <div className="relative">
       <motion.div
-        className="bg-white/40 backdrop-blur-sm rounded-2xl p-6 shadow-sm bg-gradient-to-r from-transparent via-[#ffffff] to-transparent border border-[#06A77D] space-y-4"
+        className="bg-white/40 backdrop-blur-sm rounded-2xl p-6 shadow-sm bg-gradient-to-r from-[#ffffff]/80 via-[#ffffff] to-[#ffffff]/80 border border-[#06A77D] space-y-4"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
         <div className="flex justify-between items-center">
-          <h3 className="text-xl font-semibold text-[#005377]">
+          <h3 className="text-xl font-semibold text-[#d1a575]">
             {eventData.title.split(" - ")[0]}
           </h3>
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="text-[#005377] hover:text-[#06A77D] transition-colors"
+            className="text-[#d1a575] hover:text-[#06A77D] transition-colors"
             onClick={() => setShowCalendarModal(true)}
           >
             <CalendarPlus className="w-5 h-5" />
@@ -154,20 +154,20 @@ END:VCALENDAR`;
         </div>
         <div className="space-y-3 text-gray-600">
           <div className="flex items-center space-x-3">
-            <Calendar className="w-5 h-5 text-[#005377]" />
-            <span className="text-[#005377]">
+            <Calendar className="w-5 h-5 text-[#d1a575]" />
+            <span className="text-[#d1a575]">
               {formatEventDate(eventData.date)}
             </span>
           </div>
           <div className="flex items-center space-x-3">
-            <Clock className="w-5 h-5 text-[#005377]" />
-            <span className="text-[#005377]">
+            <Clock className="w-5 h-5 text-[#d1a575]" />
+            <span className="text-[#d1a575]">
               {eventData.startTime} - {eventData.endTime} WIB
             </span>
           </div>
           <div className="flex items-center space-x-3">
-            <MapPin className="w-5 h-5 text-[#005377]" />
-            <span className="text-[#005377]">{eventData.location}</span>
+            <MapPin className="w-5 h-5 text-[#d1a575]" />
+            <span className="text-[#d1a575]">{eventData.location}</span>
           </div>
         </div>
       </motion.div>
@@ -194,7 +194,7 @@ END:VCALENDAR`;
           <div className="space-y-3">
             <CalendarButton
               icon={(props) => (
-                <Chrome {...props} className="w-5 h-5 text-[#005377]" />
+                <Chrome {...props} className="w-5 h-5 text-[#d1a575]" />
               )}
               label="Google Calendar"
               onClick={() => window.open(googleCalendarLink(), "_blank")}
