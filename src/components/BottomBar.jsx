@@ -5,10 +5,8 @@ import {
   Home,
   Quote,
   FileUser,
-  BellRing,
   CalendarHeart,
   MapPin,
-  Loader2,
   Gift,
   MessageCircleHeart,
 } from "lucide-react";
@@ -20,7 +18,6 @@ const menuItems = [
   { icon: FileUser, label: "Info", href: "#detail_groom" },
   { icon: CalendarHeart, label: "Acara", href: "#event" },
   { icon: MapPin, label: "Lokasi", href: "#location" },
-  { icon: Loader2, label: "Timeline", href: "#timeline" },
   { icon: Gift, label: "Hadiah", href: "#gifts" },
   { icon: MessageCircleHeart, label: "Harapan", href: "#wishes" },
 ];

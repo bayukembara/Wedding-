@@ -141,44 +141,8 @@ export default function Events() {
                 Perjalanan Cinta Kami
               </p>
             </motion.p>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1 }}
-              className="text-gray-500 max-w-md mx-auto"
-            >
-              <CountdownTimer targetDate={config.data.date} />
-            </motion.p>
 
             {/* Decorative Line */}
-            <motion.div
-              initial={{ scale: 0 }}
-              whileInView={{ scale: 1 }}
-              transition={{ delay: 1 }}
-              className="flex items-center justify-center gap-4 mt-2"
-            >
-              <div className="h-[2px] w-12 bg-pink-300" />
-              <div className="text-pink-500">
-                <Heart className="w-5 h-5" fill="currentColor" />
-              </div>
-              <div className="h-[2px] w-12 bg-pink-300" />
-            </motion.div>
-          </motion.div>
-
-          {/* Events Grid */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{
-              delay: 1.5,
-              duration: 0.6,
-              type: "spring",
-              stiffness: 70,
-              damping: 15,
-            }}
-            className="max-w-2xl mx-auto"
-          >
-            <EventCards events={config.data.agenda} />
             <div className="pt-6 relative">
               <FloatingHearts />
               <motion.div
@@ -198,7 +162,33 @@ export default function Events() {
                 />
               </motion.div>
             </div>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1 }}
+              className="text-gray-500 max-w-md mx-auto"
+            >
+              <CountdownTimer targetDate={config.data.date} />
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                delay: 1.5,
+                duration: 0.6,
+                type: "spring",
+                stiffness: 70,
+                damping: 15,
+              }}
+              className="max-w-2xl mx-auto"
+            >
+              <EventCards events={config.data.agenda} />
+            </motion.div>
           </motion.div>
+
+          {/* Events Grid */}
         </motion.div>
       </section>
     </>
