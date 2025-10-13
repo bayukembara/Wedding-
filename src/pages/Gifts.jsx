@@ -116,7 +116,7 @@ export default function Gifts() {
                 transition={{ delay: 0.2 * index + 0.7 }}
                 className="relative group"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#d1a575]/20 to-transparent  rounded-2xl transform transition-transform group-hover:scale-105 duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-br from-white via-[#d1a575] to-white  rounded-2xl transform transition-transform  duration-300" />
                 <div className="relative backdrop-blur-sm bg-orange-100/10 p-6 rounded-2xl border border-[#d1a575] shadow-lg">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-4">
@@ -128,7 +128,7 @@ export default function Gifts() {
                         />
                       </div>
                       <div>
-                        <h3 className="font-medium text-[#d1a575]">
+                        <h3 className="font-medium text-[#e28725]">
                           {account.bank}
                         </h3>
                         <p className="text-sm text-black">
@@ -136,7 +136,7 @@ export default function Gifts() {
                         </p>
                       </div>
                     </div>
-                    <Wallet className="w-5 h-5 text-[#f7a854]" />
+                    <Wallet className="w-5 h-5 text-[#e28725]" />
                   </div>
 
                   <div className="mt-4">
@@ -150,7 +150,7 @@ export default function Gifts() {
                         onClick={() =>
                           copyToClipboard(account.accountNumber, account.bank)
                         }
-                        className="flex items-center space-x-1 text-[#f7a854] hover:text-[#ec8d28]"
+                        className="flex items-center space-x-1 text-[#e28725] hover:text-[#ec8d28]"
                       >
                         {copiedAccount === account.bank ? (
                           <CheckCircle className="w-4 h-4" />
