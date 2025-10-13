@@ -16,7 +16,6 @@ export default function MainContent() {
       <DetailGroom />
       <Events />
       <Location />
-      <TimeLine />
       <Gifts />
       <Wishes />
     </>

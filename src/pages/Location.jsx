@@ -15,6 +15,13 @@ export default function Location() {
     <>
       {/* Location section */}
       <section id="location" className="min-h-screen relative overflow-hidden">
+        <motion.div className="absolute inset-0 w-full  h-full">
+          <img
+            src={config.data.background_base}
+            alt="home"
+            className="w-full h-full object-cover flex items-center justify-center"
+          />
+        </motion.div>
         <div className="container mx-auto px-4 py-20 relative z-10">
           {/* Section Header */}
           <motion.div
@@ -26,8 +33,8 @@ export default function Location() {
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="text-4xl md:text-5xl text-[#a84e1d]"
+              transition={{ delay: 0.8 }}
+              className="text-4xl md:text-5xl text-[#005377] uppercase font-bold"
             >
               Lokasi
             </motion.h2>
@@ -39,9 +46,9 @@ export default function Location() {
               transition={{ delay: 0.4 }}
               className="flex items-center justify-center gap-4 pt-4"
             >
-              <div className="h-[1px] w-12 bg-[#a84e1d]" />
-              <MapPin className="w-5 h-5 text-[#a84e1d]" />
-              <div className="h-[1px] w-12 bg-[#a84e1d]" />
+              <div className="h-[1px] w-12 bg-[#005377]" />
+              <MapPin className="w-5 h-5 text-[#005377]" />
+              <div className="h-[1px] w-12 bg-[#005377]" />
             </motion.div>
           </motion.div>
 
@@ -52,7 +59,7 @@ export default function Location() {
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="w-full h-[400px] rounded-2xl overflow-hidden shadow-lg border-8 border-orange-300/50"
+              className="w-full h-[400px] rounded-2xl overflow-hidden shadow-lg border-8 border-[#005377]/50"
             >
               <iframe
                 src={config.data.maps_embed}
@@ -73,29 +80,27 @@ export default function Location() {
               transition={{ duration: 0.8 }}
               className="space-y-6"
             >
-              <div className="bg-gradient-to-r from-transparent via-orange-200 to-transparent rounded-2xl p-8 shadow-lg border border-orange-300/50">
-                <h3 className="text-2xl text-[#995028] mb-6">
+              <div className="bg-gradient-to-r from-[#fafafa] via-[#fafafa] to-[#fafafa] rounded-2xl p-8 shadow-lg border border-[#005377]/50">
+                <h3 className="text-2xl text-[#005377] mb-6 uppercase font-bold">
                   {config.data.location}
                 </h3>
 
                 <div className="space-y-4">
                   <div className="flex items-start space-x-4">
-                    <MapPin className="w-5 h-5 text-orange-600 mt-1" />
-                    <p className="text-[#4e2915] flex-1">
-                      {config.data.address}
-                    </p>
+                    <MapPin className="w-5 h-5 text-[#005377] mt-1" />
+                    <p className="text-black flex-1">{config.data.address}</p>
                   </div>
 
                   <div className="flex items-center space-x-4">
-                    <CalendarCheck className="w-5 h-5 text-orange-600" />
-                    <p className="text-[#4e2915]">
+                    <CalendarCheck className="w-5 h-5 text-[#005377]" />
+                    <p className="text-black">
                       {formatEventDate(config.data.date)}
                     </p>
                   </div>
 
                   <div className="flex items-center space-x-4">
-                    <Clock className="w-5 h-5 text-orange-600" />
-                    <p className="text-[#4e2915]">{config.data.time}</p>
+                    <Clock className="w-5 h-5 text-[#005377]" />
+                    <p className="text-black">{config.data.time}</p>
                   </div>
 
                   {/* Action Button - Full Width */}
