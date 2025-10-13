@@ -49,7 +49,7 @@ export default function Gifts() {
               initial={{ opacity: 0, y: 20 }}
               animate={hasAnimated ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.3 }}
-              className="text-4xl md:text-5xl font-serif text-black"
+              className="text-4xl md:text-5xl font-sans text-black"
             >
               Berikan Hadiah
             </motion.h2>
