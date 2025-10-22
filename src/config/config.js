@@ -56,10 +56,10 @@ const config = {
         icon: "/images/bank/jago.png",
       },
       {
-        bank: "Bank Jago",
-        accountNumber: "1044 4844 2107",
+        bank: "Bank Rakyat Indonesia (BRI)",
+        accountNumber: "0023 0110 3812 504",
         accountName: "Hanisah Damayanti",
-        icon: "/images/bank/jago.png",
+        icon: "/images/bank/bri.png",
       },
     ],
     background: {
