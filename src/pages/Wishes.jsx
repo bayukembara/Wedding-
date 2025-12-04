@@ -16,10 +16,13 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import { formatEventDate } from "@/lib/formatEventDate";
+import { db } from "@/firebase";
+import { ref, push } from "firebase/database";
 
 export default function Wishes() {
   const [showConfetti, setShowConfetti] = useState(false);
   const [newWish, setNewWish] = useState("");
+  const [fullname, setFullname] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [attendance, setAttendance] = useState("");
   const [isOpen, setIsOpen] = useState(false);
@@ -59,25 +62,74 @@ export default function Wishes() {
 
   const handleSubmitWish = async (e) => {
     e.preventDefault();
-    if (!newWish.trim()) return;
+
+    // e.preventDefault();
+    // if (!newWish.trim()) return;
+    // if (!attendance) return;
+    // setIsSubmitting(true);
+    // // Prepare data to save in Firebase
+    // const newWishObj = {
+    //   name: "Guest", // Replace with your actual name input later
+    //   message: newWish,
+    //   attend: attendance,
+    //   timestamp: new Date().toISOString(),
+    // };
+    // try {
+    //   // Save to Firebase Realtime Database
+    //   await push(ref(db, "wishes"), newWishObj);
+    //   // Also update local UI (optional)
+    //   setWishes((prev) => [
+    //     {
+    //       id: Date.now(),
+    //       ...newWishObj,
+    //       attending: attendance.toLowerCase(),
+    //     },
+    //     ...prev,
+    //   ]);
+    //   // Reset form
+    //   setNewWish("");
+    //   setAttendance("");
+    //   setIsSubmitting(false);
+    //   // Show confetti
+    //   setShowConfetti(true);
+    //   setTimeout(() => setShowConfetti(false), 3000);
+    // } catch (error) {
+    //   console.error("Error saving wish:", error);
+    //   setIsSubmitting(false);
+    // }
+
+    e.preventDefault();
+
+    // if (!newWish.trim() || !fullname.trim() || !attendance) {
+    //   alert("Harap isi semua field!");
+    //   return;
+    // }
 
     setIsSubmitting(true);
-    // Simulating API call
-    await new Promise((resolve) => setTimeout(resolve, 1000));
 
     const newWishObj = {
-      id: wishes.length + 1,
-      name: "Guest", // Replace with actual user name
-      message: newWish,
-      attend: "attending",
+      name: fullname.trim(),
+      message: newWish.trim(),
+      attend: attendance,
       timestamp: new Date().toISOString(),
     };
 
-    setWishes((prev) => [newWishObj, ...prev]);
-    setNewWish("");
-    setIsSubmitting(false);
-    setShowConfetti(true);
-    setTimeout(() => setShowConfetti(false), 3000);
+    try {
+      await push(ref(db, "wishes"), newWishObj);
+      // Reset form
+      setNewWish("");
+      setFullname("");
+      setAttendance("");
+      setIsSubmitting(false);
+
+      // Show confetti
+      setShowConfetti(true);
+      setTimeout(() => setShowConfetti(false), 3000);
+    } catch (error) {
+      console.error("Error saving wish:", error);
+      alert("Gagal mengirim doa. Silakan coba lagi.");
+      setIsSubmitting(false);
+    }
   };
   const getAttendanceIcon = (status) => {
     switch (status) {
@@ -229,6 +281,7 @@ export default function Wishes() {
                       type="text"
                       placeholder="Masukan nama kamu..."
                       className="w-full px-4 py-2.5 rounded-xl bg-white/50 border border-rose-100 focus:border-rose-300 focus:ring focus:ring-rose-200 focus:ring-opacity-50 transition-all duration-200 text-gray-700 placeholder-gray-400"
+                      name="fullname"
                       required
                     />
                   </div>
@@ -319,14 +372,16 @@ export default function Wishes() {
                     <span className="text-sm">Berikan Doa Anda</span>
                   </div>
                   <motion.button
+                    type="submit" // ✅ THIS IS THE FIX
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
+                    disabled={isSubmitting}
                     className={`flex items-center space-x-2 px-6 py-2.5 rounded-xl text-white font-medium transition-all duration-200
-                    ${
-                      isSubmitting
-                        ? "bg-gray-300 cursor-not-allowed"
-                        : "bg-[#d1a575] hover:bg-[#d48e42]"
-                    }`}
+    ${
+      isSubmitting
+        ? "bg-gray-300 cursor-not-allowed"
+        : "bg-[#d1a575] hover:bg-[#d48e42]"
+    }`}
                   >
                     <Send className="w-4 h-4" />
                     <span>

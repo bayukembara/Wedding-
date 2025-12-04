@@ -3,7 +3,7 @@ import Home from "@/pages/Home";
 import DetailGroom from "@/pages/DetailGroom";
 import Events from "@/pages/Events";
 import Location from "@/pages/Location";
-import Wishes from "@/pages/Wishes";
+import Wish from "@/pages/Wish";
 import Gifts from "@/pages/Gifts";
 import Quote from "@/pages/Quote";
 import TimeLine from "@/pages/TimeLine";
@@ -17,7 +17,7 @@ export default function MainContent() {
       <Events />
       <Location />
       <Gifts />
-      <Wishes />
+      <Wish />
     </>
   );
 }
