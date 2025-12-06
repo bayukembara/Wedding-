@@ -24,8 +24,8 @@ const config = {
       {
         title: "Akad Nikah",
         date: "2025-12-27",
-        startTime: "08:00",
-        endTime: "08:30",
+        startTime: "07:30",
+        endTime: "08:00",
         location: "Rumah Mempelai Wanita",
         address:
           "Ds/Dsn. Plosogeneng RT03 RW02 Kecamatan Jombang Kabupaten Jombang ",
@@ -120,7 +120,6 @@ const config = {
       },
     ],
   },
-
 };
 
 export default config;
